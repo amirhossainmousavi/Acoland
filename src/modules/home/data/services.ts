@@ -1,0 +1,25 @@
+import SettingIcon from '@/common/assets/setting.png'
+import BrainstormIcon from '@/common/assets/brainstorm.png'
+import planIcon from '@/common/assets/plan.png'
+export const ServicesData =[
+        {
+            id:1,
+            title: "تعریف پروژه",
+            image:SettingIcon,
+            description:"پس از بررسی گزینه‌های متعدد، پروژه‌هایی در آکولند تعریف می‌شوند که سلامت حقوقی آن‌ها به تایید تیم حقوقی ما رسیده باشد و از سودآوری آن‌ها اطمینان داشته باشید"
+        },
+        {
+            id:2,
+            title: "فروش ثانویه و...",
+            image:BrainstormIcon,
+            description:"پس از خرید زمین، شما را تنها نمی‌گذاریم. ایجاد ارزش افزوده روی زمین از اینجا آغاز می‌شود. ما تا فروش ثانویه در کنارتان هستیم تا پروژه‌ای دیگر را با شما آغاز کنیم!"
+        },
+        {
+            id:3,
+            title: "انتقال مالکیت",
+            image:planIcon,
+            description:"یک قرارداد، با رعایت کلیه نکات حقوقی برای شما منعقد می‌شود. با عقد این قرارداد، مالکیت زمین به شما منتقل شده و هر زمان بخواهید می‌توانید زمین خود را بفروشید!"
+        }
+    ]
+
+export default ServicesData
