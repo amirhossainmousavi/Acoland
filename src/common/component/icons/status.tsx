@@ -7,4 +7,6 @@ export const StatusIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+StatusIcon.displayName = 'StatusIcon';
+
 export default StatusIcon;

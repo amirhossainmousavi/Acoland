@@ -11,4 +11,6 @@ export const LocationIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+LocationIcon.displayName = 'LocationIcon';
+
 export default LocationIcon;

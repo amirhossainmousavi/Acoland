@@ -12,4 +12,6 @@ export const PhoneIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+PhoneIcon.displayName = 'PhoneIcon';
+
 export default PhoneIcon;

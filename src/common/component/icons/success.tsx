@@ -11,4 +11,6 @@ export const SuccessIcon = memo(({ ...rest }: SVGAttributes<SVGSVGElement>) => (
   </svg>
 ));
 
+SuccessIcon.displayName = 'SuccessIcon';
+
 export default SuccessIcon;

@@ -22,4 +22,7 @@ export const PasswordIcon = memo(({ ...rest }: SVGAttributes<SVGSVGElement>) => 
   </svg>
 ));
 
+PasswordIcon.displayName = 'PasswordIcon';
+
+
 export default PasswordIcon;

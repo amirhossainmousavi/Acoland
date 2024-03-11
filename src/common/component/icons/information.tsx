@@ -6,4 +6,6 @@ export const InformationIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => 
 </svg>
 ));
 
+InformationIcon.displayName = 'InformationIcon';
+
 export default InformationIcon;

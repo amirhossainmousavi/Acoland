@@ -11,4 +11,6 @@ const CloseIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+CloseIcon.displayName = 'CloseIcon';
+
 export default CloseIcon;

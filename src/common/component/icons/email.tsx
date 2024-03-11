@@ -6,4 +6,6 @@ export const EmailIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
 </svg>
 ));
 
+EmailIcon.displayName = 'EmailIcon';
+
 export default EmailIcon;

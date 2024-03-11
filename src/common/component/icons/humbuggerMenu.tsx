@@ -6,4 +6,6 @@ const HumbuggerMenuIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+HumbuggerMenuIcon.displayName = 'HumbuggerMenuIcon';
+
 export default HumbuggerMenuIcon;

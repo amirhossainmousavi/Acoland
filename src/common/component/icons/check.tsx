@@ -7,4 +7,6 @@ export const CheckIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
 
 ));
 
+CheckIcon.displayName = 'CheckIcon';
+
 export default CheckIcon;

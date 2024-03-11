@@ -11,4 +11,6 @@ const EyeSlashIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
   </svg>
 ));
 
+EyeSlashIcon.displayName = 'EyeSlashIcon';
+
 export default EyeSlashIcon;

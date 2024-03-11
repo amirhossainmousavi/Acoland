@@ -34,4 +34,6 @@ export const ChevronIcon = memo(({ dir = 'left', ...rest }: Props) => (
   </svg>
 ));
 
+ChevronIcon.displayName = 'ChevronIcon';
+
 export default ChevronIcon;
