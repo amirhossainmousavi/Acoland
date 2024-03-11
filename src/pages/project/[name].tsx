@@ -98,7 +98,7 @@ const ProjectPage:NextPageWithLayout =() => {
             </div>
             <div className="w-full flex justify-center items-center ">
                <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-4 gap-3 bg-[#08004D] py-10 rounded-lg">
-               <Text onClick={handleOpen} fontSize='base' fontWeight="bold" className="text-white bg-[#35B34A] p-4 rounded-lg cursor-pointer" >همین الان خرید زمین را شروع کنید!</Text>
+               <Text onClick={handleOpen} fontSize={isDesktop ? "base" : "sm"} fontWeight="bold" className="text-white bg-[#35B34A] p-4 rounded-lg cursor-pointer" >همین الان خرید زمین را شروع کنید!</Text>
                </div>
             </div>
             <div className="w-full">
@@ -108,9 +108,9 @@ const ProjectPage:NextPageWithLayout =() => {
         <Modal {...modalProps} noHeader bodyClassName="p-4" className="z-[100]">
             <div className="w-full flex flex-col items-center gap-3">
                 {!isBetween9To14?.(moment()) && (
-                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر پشتیبانی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت</Alert>
+                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر کارشناسی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت.</Alert>
                 )}
-                <Text className="text-[#0C0349] text-center w-full">شماره خود را وارد نمایید و منتظر تماس کارشناسان ما باشید</Text>
+                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">شماره موبایل خود را وارد کنید.</Text>
                 <div className=" w-full flex flex-col items-center gap-4 ">
                         <TextField classNameWrapper="w-full" className='bg-[#F9F9F9] h-14 text-black focus-visible:outline-none rounded-lg' error={isFormHasError} onChange={(e) => setPhoneNumber(e.target.value)} />
                         <Button className="bg-[#35B34A] text-white w-full -mt-2 p-8 md:p-0" onClick={handleSubmitForm}>ارسال</Button>

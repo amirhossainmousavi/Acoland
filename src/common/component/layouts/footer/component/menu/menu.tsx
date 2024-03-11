@@ -5,11 +5,13 @@ import classNames from "@/common/utils/classNames"
 import PhoneIcon from "@/common/component/icons/phone"
 import LocationIcon from "@/common/component/icons/location"
 import EmailIcon from "@/common/component/icons/email"
+import useResponsive from "@/common/hooks/useResponsive"
 
 export const Menu = () =>{
+  const {isDesktop} = useResponsive();
     return <div className="flex gap-4 w-full md:w-[50%] mt-4">
         <div className="md:w-[30%] w-2/4 flex flex-col gap-3 mr-6">
-            <Text className="block text-white" fontSize="lg" fontWeight="bold">دسترسی های سریع</Text>
+            <Text className="block text-white" fontSize={isDesktop ? "lg" : "base"} fontWeight="bold">دسترسی های سریع</Text>
             <nav className='flex flex-col justify-start w-full'>
               <ul className="flex flex-col justify-start mb-3">
                 <li>
@@ -23,7 +25,7 @@ export const Menu = () =>{
               </nav>
         </div>
         <div className="w-[60%] flex flex-col gap-3">
-            <Text className="block text-white" fontSize="lg" fontWeight="bold">آدرس و اطلاعات تماس</Text>
+            <Text className="block text-white" fontSize={isDesktop ? "lg" : "base"} fontWeight="bold">آدرس و اطلاعات تماس</Text>
             <nav className='flex flex-col justify-start w-full mt-3'>
               <ul className="flex flex-col items-start justify-start mb-1 gap-4">
                 <li className="flex items-center gap-3 cursor-pointer" onClick={() => location.assign('tel:02191099118')}>

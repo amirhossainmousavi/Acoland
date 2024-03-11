@@ -108,7 +108,7 @@ export const RepresentationList = () =>{
 
     return(
         <div className="md:w-[85%] p-2 md:p-0 flex flex-col overflow-x-auto justify-center items-center mt-4 z-0">
-            <Text fontSize={isDesktop ? 'base' : 'sm'} className="flex justify-center items-center gap-2 flex-row-reverse mb-4 text-center md:text-start">استان و شهر و مورد نظر خود را انتخاب کنید تا آدرس و اطلاعات نماینده ها به شما نشان داده شود. <LocationIcon className="w-12 h-12 md:w-8 md:w-8" /></Text>
+            <Text fontSize={isDesktop ? 'base' : 'sm'} className="flex justify-center items-center gap-2 flex-row-reverse mb-4 text-center md:text-start">استان و شهر و مورد نظر خود را انتخاب کنید تا اطلاعات نماینده های آن شهر به شما نشان داده شود. <LocationIcon className="w-12 h-12 md:w-8" /></Text>
             <div className='flex justify-center flex-col md:flex-row gap-3 w-full'>
                 <Autocomplete
                     searchable

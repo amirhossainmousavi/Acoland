@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import { isBetween9To14 } from "@/common/utils/isBetween9To14";
 import moment from "moment";
 import Alert from "../alert";
+import useResponsive from "@/common/hooks/useResponsive";
 
 type InfoType = {
         text?:string,
@@ -40,6 +41,7 @@ export const Info = (props: InfoProps) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [isFormHasError,setIsFormHasError] = useState<boolean>(false)
     const router = useRouter()
+    const {isDesktop} = useResponsive();
 
     const handleSubmitForm = () => {
         if(!phoneNumberValidator(phoneNumber)){
@@ -80,9 +82,9 @@ export const Info = (props: InfoProps) => {
         <Modal {...modalProps} noHeader bodyClassName="p-4" className="z-[100]">
             <div className="w-full flex flex-col items-center gap-3">
                 {!isBetween9To14?.(moment()) && button?.text ==='درخواست خرید قطعه' && (
-                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر پشتیبانی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت</Alert>
-                )}
-                <Text className="text-[#0C0349] text-center w-full">شماره خود را وارد نمایید و منتظر تماس کارشناسان ما باشید</Text>
+                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر کارشناسی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت.</Alert>
+                 )}
+                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">شماره موبایل خود را وارد کنید.</Text>
                 <div className=" w-full flex flex-col items-center gap-4 ">
                         <TextField classNameWrapper="w-full" className='bg-[#F9F9F9] h-14 text-black focus-visible:outline-none rounded-lg' error={isFormHasError} onChange={(e) => setPhoneNumber(e.target.value)} />
                         <Button className="bg-[#35B34A] text-white w-full -mt-2 p-8 md:p-0" onClick={handleSubmitForm}>ارسال</Button>

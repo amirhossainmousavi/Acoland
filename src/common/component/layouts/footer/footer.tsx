@@ -1,8 +1,10 @@
+import useResponsive from "@/common/hooks/useResponsive";
 import Text from "../../atom/text"
 import Info from "./component/info/info"
 import Menu from "./component/menu"
 
 export const Footer = () =>{
+    const {isDesktop} = useResponsive();
     return (
         <div className="w-full h-auto bg-[#0C0349] justify-center py-8 rounded-t-3xl flex flex-col items-center">
             <div className="w-full p-2 md:p-0 md:w-[85%] flex flex-col md:flex-row justify-between">
@@ -13,7 +15,7 @@ export const Footer = () =>{
                 </div>
             </div>
             <div className="w-full p-2 mt-10 md:w-[85%] flex flex-col items-center border-t-2 border-t-white">
-                <Text className="text-white mt-6 text-center md:text-start leading-8" fontWeight="bold">تمامی حقوق مادی و معنوی این سایت متعلق به هلدینگ آکو می‌باشد.</Text>
+                <Text className="text-white mt-6 text-center md:text-start leading-8" fontSize={isDesktop ? "base" : "sm"} fontWeight="bold">تمامی حقوق مادی و معنوی این سایت متعلق به هلدینگ آکو می‌باشد.</Text>
             </div>
         </div>
     )

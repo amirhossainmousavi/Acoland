@@ -117,8 +117,8 @@ export const Representation = () =>{
         <Modal {...modalProps} noHeader bodyClassName="p-4" className="z-[100]">
             <div className="w-full flex flex-col items-center gap-3">
                 {!isBetween9To14?.(moment()) &&(
-                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر پشتیبانی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت</Alert>
-                )}
+                 <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر کارشناسی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت.</Alert>
+                 )}
                 <Text className="text-[#0C0349] text-center w-full">درخواست اخد نمایندگی</Text>
                 <div className=" w-full flex flex-col items-center gap-4 ">
                 <div className="w-full flex flex-col md:flex-row md:justify-between gap-3">

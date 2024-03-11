@@ -30,12 +30,12 @@ const RepresentativePage:NextPageWithLayout =() => {
                 <div className="flex flex-col md:flex-row justify-between items-start">
                     <Image src={data?.image} width={500} height={500} alt={data?.name ?? ''} className="md:w-[40%] w-full" />
                     <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center w-full md:w-[55%] mt-4">
-                    <Text className="text-[#08004D]" fontSize="lg" fontWeight="bold">{data.gender === 'man' ? 'آقای' : 'خانم'} {data.name}</Text> 
-                    <Text dangerouslySetInnerHTML={{__html:data.description}} className="leading-10 text-[#707070] text-justify" fontWeight="light" />
+                    <Text className="text-[#08004D]" fontSize={isDesktop ? "lg" : "base"} fontWeight="bold">{data.gender === 'man' ? 'آقای' : 'خانم'} {data.name}</Text> 
+                    <Text dangerouslySetInnerHTML={{__html:data.description}} fontSize={isDesktop ? "base" : "sm"} className="leading-10 text-[#707070] text-justify" fontWeight="light" />
                     </div>
                 </div>
                 <div className="flex flex-col items-center md:my-5">
-                <Text className="text-[#08004D] text-center md:text-start" fontSize="lg" fontWeight="bold">پروژه هایی که توسط {data.gender === 'man' ? "آقای" : "خانم"} {data.name} تعریف شده اند</Text> 
+                <Text className="text-[#08004D] text-center md:text-start" fontSize={isDesktop ? "lg" : "base"} fontWeight="bold">پروژه هایی که توسط {data.gender === 'man' ? "آقای" : "خانم"} {data.name} تعریف شده اند</Text> 
                 <div className="flex flex-col md:flex-row md:flex-wrap w-full h-full gap-3 my-3 md:my-5">
                     {data?.project?.map((item:any, index:number) => (
                         <div key={index} className='w-full md:w-[49.5%] p-3 border border-[#BBBCBC] border-solid rounded-md'>
