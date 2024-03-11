@@ -18,7 +18,7 @@ const Representatives:NextPageWithLayout =() => {
 اعتماد به تجربه ما در این حوزه، اطمینان از انتخاب درست شماست</Text>
             </div>
         </div>
-        <div className="w-full justify-center flex z-50">
+        <div className="w-full justify-center flex z-[5]">
           <RepresentationList />
         </div>
           <div className="mb-4 z-0">

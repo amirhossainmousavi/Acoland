@@ -22,15 +22,13 @@ const RepresentativePage:NextPageWithLayout =() => {
             setIsLoading(false)
         }, 3000);
     },[])
-
-    console.log(data);
     
     return (    
         <>
         <div className="w-full flex justify-center flex-col items-center mt-[5rem] md:mt-[8rem] p-2 md:p-0" >
             <div className="md:w-[85%] flex flex-col  w-full">
                 <div className="flex flex-col md:flex-row justify-between items-start">
-                    <Image src={data.image} width={500} height={500} alt={data.name} className="md:w-[40%] w-full" />
+                    <Image src={data?.image} width={500} height={500} alt={data?.name ?? ''} className="md:w-[40%] w-full" />
                     <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center w-full md:w-[55%] mt-4">
                     <Text className="text-[#08004D]" fontSize="lg" fontWeight="bold">{data.gender === 'man' ? 'آقای' : 'خانم'} {data.name}</Text> 
                     <Text dangerouslySetInnerHTML={{__html:data.description}} className="leading-10 text-[#707070] text-justify" fontWeight="light" />

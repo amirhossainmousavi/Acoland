@@ -55,8 +55,8 @@ export const Info = (props: InfoProps) => {
         <div className={classNames('w-full h-auto flex flex-col justify-between gap-3 rounded-md', parentClassName)}>
             <Text className="text-white block w-full p-3 bg-[#35B34A] text-center rounded-md" fontSize="sm" fontWeight="bold">{name}</Text>
             <div className={classNames('flex flex-col w-full h-auto gap-3')}>
-                {info?.map((item:InfoType) => (
-                    <>
+                {info?.map((item:InfoType, index:number) => (
+                    <div key={index}>
                         {item.type === 'address' && (
                             <div className="flex items-center gap-3"><Image src={item.icon} alt={item.name} width={20} height={20}  /> <Text className="text-[0.8rem] line-clamp-1">{item.text}</Text></div>
                         )}
@@ -72,7 +72,7 @@ export const Info = (props: InfoProps) => {
                                 <Text className="flex items-center gap-3 text-[#BBBCBC] text-[0.8rem]">{item.text}</Text>
                             </div>
                         )}
-                    </>
+                    </div>
                 ))}
                 <Button className="flex items-center !p-3 gap-3 bg-[#0C0349] text-[0.8rem]" onClick={!button?.action ? handleOpen : routerpush}>{!!button?.icon && <Image src={button.icon} alt='button' width={20} height={20}  />}{button?.text}</Button>
             </div>

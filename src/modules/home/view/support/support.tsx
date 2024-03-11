@@ -40,7 +40,6 @@ export const Support = () => {
         const isValidForm = every(SupportFromInput, (item:any) => {
             const value = supportFormData[item.state].value;
             const helperText = supportFormData[item.state];
-            console.log(helperText)
             const isValid = item.isValid(value);
             updatedInformationData[item.state] = {
                 value,
@@ -56,9 +55,7 @@ export const Support = () => {
         }));
             if (isValidForm) {
             console.log('Form is valid');
-        } else {
-            console.log(Object.values(supportFormData).find((item:any) => !item.isValid));
-            
+        } else {            
             toast.error('لطفا اطلاعات خود را به درستی وارد کنید!' )
         }
     };

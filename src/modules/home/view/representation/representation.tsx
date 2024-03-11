@@ -73,7 +73,6 @@ export const Representation = () =>{
         const isValidForm = every(RepresentationFormData, (item:any) => {
             const value = representationFormData[item.state].value;
             const helperText = representationFormData[item.state];
-            console.log(helperText)
             const isValid = item.isValid(value);
             updatedInformationData[item.state] = {
                 value,
