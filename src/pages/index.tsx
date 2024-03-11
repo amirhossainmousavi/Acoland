@@ -77,12 +77,8 @@ const handleSubmitCommiutyForm = () =>{
     </video>
     <div className='p-2 md:p-0 w-full  h-[100vh] md:h-[102vh] absolute top-0 bg-black/70 flex flex-col justify-center items-center'>
       <div className="mt-8 flex flex-col justify-center items-center gap-3 md:z-50">
-        <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold' className='block text-white text-center'><span className='text-[#66D178]'>آکولند</span>، سرمایه‌گذاری بی‌نگران با بازدهی بالا و کمترین ریسک‌ها</Text>
-        <Text fontSize={isDesktop?'base' : 'sm'} className='block text-[#66D178] text-center leading-7'>مرجع تخصصی سرمایه گذاری روی زمین، امکان سرمایه‌گذاری سودآور، بدون ریسک و با خاطر آسوده بابت مشکلات و مسائل حقوقی را برای شما فراهم می‌کند.</Text>
-        <div className='flex gap-3 mt-4'>
-        <Button onClick={() => router.push('/projects')} className='w-[10rem] bg-[#D4A129] border-none !p-0'>مشاهده پروژه</Button>
-        <Button onClick={() => router.push('/representatives')} className='w-[10rem] bg-[#35B34A] border-none !p-0'>اخذ نمایندگی</Button>
-        </div>
+        <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold' className='block text-white text-center'><span className='text-[#66D178]'>آکولند</span>، دروازه‌ای به سوی سرمایه‌گذاری آسان و اطمینان‌بخش در زمین.</Text>
+        <Text fontSize={isDesktop?'base' : 'sm'} className='block text-[#66D178] text-center leading-7'> ما به شما این امکان را می‌دهیم تا با خیالی راحت و بدون دغدغه‌های حقوقی، در بازار زمین سرمایه‌گذاری کنید و از بازدهی بالا لذت ببرید.</Text>
       </div>
     </div>
     <div className='p-2 md:p-0 flex items-center relative justify-center w-full z-50 '>
@@ -107,7 +103,7 @@ const handleSubmitCommiutyForm = () =>{
     <div className='w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-6 gap-2 md:gap-3'>
       <div className='w-full text-center md:text-start flex justify-center flex-col gap-2 md:gap-3'>
       <Text className='block text-[#35B34A]' fontSize={isDesktop ? 'lg' : 'base'}  fontWeight='bold'>خدمات ما</Text>
-      <Text className='block text-[#08004D]' fontSize={isDesktop ? 'lg' : 'base'}  fontWeight='bold'>آکولند چه خدماتی را ارائه میدهند؟</Text>
+      <Text className='block text-[#08004D]' fontSize={isDesktop ? 'lg' : 'base'}  fontWeight='bold'>آکولند چه خدماتی را ارائه میدهد؟</Text>
       </div>
       <div className='w-full flex flex-col md:flex-row gap-6 md:gap-3 z-50 mt-4 md:mt-0'>
         {ServicesData.map((service:any) =>(
@@ -129,7 +125,7 @@ const handleSubmitCommiutyForm = () =>{
     <div className='p-2 md:p-0 flex items-center justify-center w-full md:mt-8 mt-4'>
       <div className='w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4'>
         <div className='gap-2 md:gap-3 text-center md:text-start flex flex-col w-full'>
-          <Text className='block text-[#35B34A]' fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold'>سرمایه گذاری خود را شروع کنید!</Text>
+          <Text className='block text-[#35B34A]' fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold'>آغاز مسیری جدید در سرمایه‌گذاری: آینده‌ی مالی خود را با آکولند بسازید.</Text>
           <Text className='block text-[#08004D]' fontSize='base'>سرمایه‌گذاری خود را آغاز کنید، آینده‌ی مالیتان در انتظار است</Text>
         </div>
         <div className='w-full mb-4'>
@@ -146,7 +142,6 @@ const handleSubmitCommiutyForm = () =>{
     <Statistics />
     <Reviews 
       title='تجربه سرمایه گذاران از مشارکت در پروژه‌های آکولند'
-      description='با خواندن تجربیات مثبت دیگر سرمایه‌گذاران در پروژه‌های آکولند، به شما اطمینان می‌دهد که می‌توانید با اطمینان و با خیال راحت سرمایه‌گذاری خود را شروع کنید.'
       VideoData={VideoData}
       rateData={rateData}
     />
@@ -167,7 +162,7 @@ const handleSubmitCommiutyForm = () =>{
               ))}
               </div>
               <div className='flex flex-col gap-4'>
-                <Text className='block text-[#373737] leading-7 text-center md:text-start mt-4 md:mt-0' fontSize={isDesktop ? 'lg' : 'base'}>برای عضویت پیوستن به جامعه سرمایه گذاران شماره موبایل خود را وارد کنید</Text>
+                <Text className='block text-[#373737] leading-7 text-center md:text-start mt-4 md:mt-0' fontSize={isDesktop ? 'lg' : 'base'}>برای عضویت به جامعه سرمایه گذاران شماره موبایل خود را وارد کنید</Text>
                 <div className='flex items-center'>
                   <TextField type='text' placeholder='شماره موبایل را وارد کنید'  className='bg-[#F9F9F9] focus-visible:outline-none p-7 text-black border-none rounded-l-none' onChange={(e:any) => setPhoneNumber(e.target.value)} />
                   <Button className='bg-[#35B34A] p-7 text-white rounded-r-none w-36' onClick={handleSubmitCommiutyForm}>ارسال</Button>
@@ -180,7 +175,6 @@ const handleSubmitCommiutyForm = () =>{
         <div className='w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4 z-50'>
           <div className='gap-2 md:gap-3 text-center md:text-center flex flex-col w-full'>
             <Text className='block' fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold'><span className='text-[#35B34A]'>آموزش‌ها و مقالات:</span> <span className='text-[#08004D]'>راهنمایی شروع به سرمایه‌گذاری و موفقیت مالی</span></Text>
-            <Text className='block text-[#35B34A] bg-white leading-7' fontSize='sm'>با خواندن تجربیات مثبت دیگر سرمایه‌گذاران در پروژه‌های آکولند، به شما اطمینان می‌دهد که می‌توانید با اطمینان و با خیال راحت سرمایه‌گذاری خود را شروع کنید.</Text>
           </div>
           <div className='flex flex-col md:flex-row md:flex-wrap gap-3 md:mt-4 w-full overflow-auto'>
           {BlogData.map((blog:any, index:number) =>(

@@ -47,7 +47,9 @@ export const Info = (props: InfoProps) => {
         if(!phoneNumberValidator(phoneNumber)){
             setIsFormHasError(true)
             toast.error('شماره وارد شده صحیح نمی‌باشد!')
-        } return
+            return
+        } 
+        toast.success('درخواست شما با موفقیت ثبت شد.')
     }
     const routerpush = () => {
         router.push(button?.action!)
@@ -55,7 +57,7 @@ export const Info = (props: InfoProps) => {
     
     return <>
         <div className={classNames('w-full h-auto flex flex-col justify-between gap-3 rounded-md', parentClassName)}>
-            <Text className="text-white block w-full p-3 bg-[#35B34A] text-center rounded-md" fontSize="sm" fontWeight="bold">{name}</Text>
+            <Text className="text-white block w-full p-3 bg-[#0C0349] text-center rounded-md" fontSize="sm" fontWeight="bold">{name}</Text>
             <div className={classNames('flex flex-col w-full h-auto gap-3')}>
                 {info?.map((item:InfoType, index:number) => (
                     <div key={index}>
@@ -76,7 +78,7 @@ export const Info = (props: InfoProps) => {
                         )}
                     </div>
                 ))}
-                <Button className="flex items-center !p-3 gap-3 bg-[#0C0349] text-[0.8rem]" onClick={!button?.action ? handleOpen : routerpush}>{!!button?.icon && <Image src={button.icon} alt='button' width={20} height={20}  />}{button?.text}</Button>
+                <Button className="flex items-center !p-3 gap-3 bg-[#35B34A] text-[0.8rem]" onClick={!button?.action ? handleOpen : routerpush}>{!!button?.icon && <Image src={button.icon} alt='button' width={20} height={20}  />}{button?.text}</Button>
             </div>
         </div>  
         <Modal {...modalProps} noHeader bodyClassName="p-4" className="z-[100]">
@@ -84,7 +86,7 @@ export const Info = (props: InfoProps) => {
                 {!isBetween9To14?.(moment()) && button?.text ==='درخواست خرید قطعه' && (
                  <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر کارشناسی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت.</Alert>
                  )}
-                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">شماره موبایل خود را وارد کنید.</Text>
+                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">{button?.text ==='درخواست خرید قطعه' ? 'برای درخواست خرید قطعه زمین، شماره خود را وارد کنید تا کارشناسان ما با  شما تماس برقرار کنند' : 'شماره موبایل خود را وارد کنید.     '}</Text>
                 <div className=" w-full flex flex-col items-center gap-4 ">
                         <TextField classNameWrapper="w-full" className='bg-[#F9F9F9] h-14 text-black focus-visible:outline-none rounded-lg' error={isFormHasError} onChange={(e) => setPhoneNumber(e.target.value)} />
                         <Button className="bg-[#35B34A] text-white w-full -mt-2 p-8 md:p-0" onClick={handleSubmitForm}>ارسال</Button>

@@ -8,6 +8,7 @@ export const RepresentationForm = [
         required: true,
         type: 'text',
         isMultiLine: false,
+        helperText:'لطفا نام و نام خانوادگی خود را به صورت فارسی وارد کنید.',
         isValid: (e:any) => isPersian(e)
     },
     {
@@ -17,6 +18,7 @@ export const RepresentationForm = [
         required: true,
         type: 'text',
         isMultiLine: false,
+         helperText:"لطفا شماره موبایل خود را به صورت صحیح وارد کنید.",
         isValid: (e:any) => phoneNumberValidator(e)
     },
 ]

@@ -23,23 +23,24 @@ export const Support = () => {
         personaInfo:{
             value:'',
             isValid: true,
+            helperText:'لطفا نام و نام خانوادگی خود را به صورت فارسی وارد کنید.'
         },
         phoneNumber:{
             value:'',
             isValid: true,
+            helperText:"لطفا شماره موبایل خود را به صورت صحیح وارد کنید."
         },
         description:{
             value:'',
             isValid: true,
-
+            helperText:"لطفا توضیحات خود را تکمیل کنید."
         },
     });
-
     const handleSubmitForm = () => {
-        const updatedInformationData:any = {};
+        const updatedInformationData:Record<any, any> = {};
         const isValidForm = every(SupportFromInput, (item:any) => {
             const value = supportFormData[item.state].value;
-            const helperText = supportFormData[item.state];
+            const helperText = item?.helperText;
             const isValid = item.isValid(value);
             updatedInformationData[item.state] = {
                 value,
@@ -48,15 +49,15 @@ export const Support = () => {
             };
             return isValid;
         });
-
+        
         setSupportFormData((prev:any) => ({
             ...prev,
             ...updatedInformationData
         }));
-            if (isValidForm) {
-            console.log('Form is valid');
+        if (isValidForm) {
+            toast.success('درخواست مشاوره شما با موفقیت ثبت گردید.')
         } else {            
-            toast.error('لطفا اطلاعات خود را به درستی وارد کنید!' )
+            toast.error(Object.values(updatedInformationData)?.find?.((item:any) => !item?.isValid)?.helperText ?? '')
         }
     };
     return (
@@ -64,8 +65,8 @@ export const Support = () => {
             <div className='w-full md:w-[85%] flex flex-col md:justify-between md:mt-4 gap-2'>
                 <div className="flex flex-col items-center w-full text-center md:gap-3 gap-1">
                     <Text fontSize={isDesktop ? 'lg' :'base'} className="block text-[#08004D] leading-7" fontWeight="bold">آیا نیاز به راهنمایی یا مشاوره دارید؟</Text>
-                    <Text fontSize='sm' className="flex flex-col gap-2 text-[#35B34A] [&>span]:block  leading-7"><span>بدون شک، انتخاب درست یک مشاور مالی می‌تواند یکی از مهم‌ترین تصمیمات مالی زندگی شما باشد</span>
-                    <span>پس اگر هنوز نیاز به مشاوره مالی دارید و می‌خواهید از مشاوره‌ای حرفه‌ای بهره‌مند شوید فرم زیرا تکمیل کنید تا با شما تماس گرفته شود</span>
+                    <Text fontSize='sm' className="flex flex-col gap-2 text-[#35B34A] [&>span]:block  leading-7"><span>بدون شک، انتخاب درست یک مشاوره می‌تواند یکی از مهم‌ترین تصمیمات مالی زندگی شما باشد</span>
+                    <span>پس اگر هنوز نیاز به مشاوره دارید و می‌خواهید از مشاوره‌ حرفه‌ای بهره‌مند شوید فرم زیرا تکمیل کنید تا با شما تماس گرفته شود</span>
                     </Text>
                 </div>
                 <div className="flex w-full gap-2 items-center">

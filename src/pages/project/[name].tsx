@@ -34,7 +34,9 @@ const ProjectPage:NextPageWithLayout =() => {
         if(!phoneNumberValidator(phoneNumber)){
             setIsFormHasError(true)
             toast.error('شماره وارد شده صحیح نمی‌باشد!')
-        } return
+            return
+        }  
+        toast.success('درخواست شما با موفقیت ثبت شد.')
     }
     
     useEffect(() => {
@@ -51,12 +53,14 @@ const ProjectPage:NextPageWithLayout =() => {
             <div className="md:w-[85%] flex flex-col md:flex-row w-full h-full">
                 <ProjectCard images={data?.images} information={data?.information} status={data?.information?.status} infoCalssName="md:w-[30%] w-full md:rounded-xl md:border md:border-[#BBBCBC] md:border-solid -mt-9 md:mt-0 p-4" className="w-full flex !md:justify-between  !shadow-none" imagesCarouselCalssName="rounded-2xl !w-auto" imagesCalssName="!h-[90%]" />    
             </div>
-            <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between md:mt-4">
+            <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between md:my-4">
                 <div className="md:w-[55%] w-full flex flex-col gap-3">
                 <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight="bold" className="text-[#0C0349] text-center md:text-start" >{data.name}: {data.title}</Text>
                 <Text fontSize="sm" fontWeight="medium"  dangerouslySetInnerHTML={{__html:data.description}} className="leading-8 text-justify md:text-start" />
                 </div>
-                <div className="md:w-[40%] w-full h-[20rem] rounded-md mt-4 md:mt-0" dangerouslySetInnerHTML={{__html:data.video}} />
+                <div className="md:w-[40%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 overflow-hidden">
+                    <div dangerouslySetInnerHTML={{__html:data.video}} className="w-full h-full" />
+                </div>
             </div>
             <div className="w-full flex flex-col items-center min-h-[10rem] bg-[#F9F9F9] md:mt-0 -mt-16">
                 <div className="w-[85%] flex md:w-full justify-center items-center gap-3 flex-col">
@@ -110,7 +114,7 @@ const ProjectPage:NextPageWithLayout =() => {
                 {!isBetween9To14?.(moment()) && (
                  <Alert severity="warning" className="text-black text-sm p-4">در حال حاضر کارشناسی در دسترس نمی‌باشند، ما در اولین فرصت با شما تماس خواهیم گرفت.</Alert>
                 )}
-                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">شماره موبایل خود را وارد کنید.</Text>
+                <Text fontSize={isDesktop ? "base" : "sm"} className="text-[#0C0349] text-center w-full">برای درخواست خرید قطعه زمین، شماره خود را وارد کنید تا کارشناسان ما با  شما تماس برقرار کنند</Text>
                 <div className=" w-full flex flex-col items-center gap-4 ">
                         <TextField classNameWrapper="w-full" className='bg-[#F9F9F9] h-14 text-black focus-visible:outline-none rounded-lg' error={isFormHasError} onChange={(e) => setPhoneNumber(e.target.value)} />
                         <Button className="bg-[#35B34A] text-white w-full -mt-2 p-8 md:p-0" onClick={handleSubmitForm}>ارسال</Button>

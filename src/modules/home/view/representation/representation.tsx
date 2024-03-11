@@ -39,18 +39,22 @@ export const Representation = () =>{
         personaInfo:{
             value:'',
             isValid: true,
+            helperText:'لطفا نام و نام خانوادگی خود را به صورت فارسی وارد کنید.'
         },
         phoneNumber:{
             value:'',
             isValid: true,
+            helperText:"لطفا شماره موبایل خود را به صورت صحیح وارد کنید."
         },
         province:{
             value:'',
             isValid: true,
+            helperText:"لطفا استان خود را انتخاب کنید"
         },
         city:{
             value:'',
             isValid: true,
+            helperText:"لطفا شهر خود را انتخاب کنید"
         }
     });
     const representationData = [
@@ -67,12 +71,11 @@ export const Representation = () =>{
             icon:MagnifyingImage
         }
     ]
-    
     const handleSubmitForm = () => {
-        const updatedInformationData:any = {};
+        const updatedInformationData:Record<any, any> = {};
         const isValidForm = every(RepresentationFormData, (item:any) => {
             const value = representationFormData[item.state].value;
-            const helperText = representationFormData[item.state];
+            const helperText = item?.helperText;
             const isValid = item.isValid(value);
             updatedInformationData[item.state] = {
                 value,
@@ -81,15 +84,17 @@ export const Representation = () =>{
             };
             return isValid;
         });
-
+        
         setRepresentationFormData((prev:any) => ({
             ...prev,
             ...updatedInformationData
         }));
-            if (isValidForm) {
-            console.log('Form is valid');
-        } else {    
-            toast.error('لطفا اطلاعات خود را به درستی وارد کنید!' )
+        console.log(!!representationFormData.province.value);
+        
+        if (isValidForm && !!representationFormData.province.value && !!representationFormData.city.value) {
+            toast.success('درخواست مشاوره شما با موفقیت ثبت گردید.')
+        } else {            
+            toast.error(Object.values(updatedInformationData)?.find?.((item:any) => !item?.isValid)?.helperText ?? 'لطفا شهر و استان خود را انتخاب کنید.')
         }
     };
     return (

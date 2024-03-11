@@ -27,13 +27,18 @@ const AboutUs:NextPageWithLayout =() => {
                 <Text fontSize="sm" fontWeight="medium" className="leading-8 text-justify md:text-start">مهندس علیرضا عمویی در سال ۱۴۰۰، پس از ۳ سال آموزش در حوزه املاک و مستغلات، اولین پروژه سرمایه گذاری در بازار املاک را تعریف کرد. چیزی که باعث شد اولین پروژه سرمایه گذاری در این مجموعه تعریف شود، تقاضای دانش‌پذیران (دوره جامع تجارت املاک) بود.
                     در واقع سال‌ها آموزش، اعتماد دانش‌پذیران را به تخصص، صداقت و سلامت عملکرد ما جلب کرده بود. در کنار این اعتماد، نیاز به سرمایه گذاری با ریسک کم و سود بالا، تقاضای زیادی را برای تعریف پروژه‌های سرمایه گذاری تخصصی روی زمین با اجرا و مدیریت مهندس علیرضا عمویی را ایجاد کرد.</Text>
                 </div>
-                <div className="md:w-[45%] w-full md:h-[20rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg" dangerouslySetInnerHTML={{__html:infoVideo}} />
+                <div className="md:w-[45%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg overflow-hidden">
+                  <div dangerouslySetInnerHTML={{__html:infoVideo}} className="w-full h-full" />
+                </div>
             </div>
         </div>
         <Statistics />
         <div className="w-full flex justify-center">
             <div className="w-full md:w-[85%] flex flex-col-reverse md:flex-row md:justify-between md:items-center justify-center my-4">
-                    <div className="md:w-[45%] w-full md:h-[20rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg" dangerouslySetInnerHTML={{__html:infoVideo}} />
+                    <div className="md:w-[45%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg overflow-hidden">
+                      <div dangerouslySetInnerHTML={{__html:infoVideo}} className="w-full h-full" />
+                    <div />
+                    </div>
                     <div className="md:w-[50%] w-full flex flex-col gap-3">
                     <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight="bold" className="text-[#0C0349] text-center md:text-start" >ماموریت آکولند</Text>
                     <Text fontSize="sm" fontWeight="medium" className="leading-8 text-justify md:text-start">بدون سرمایه گذاری در وضعیت اقتصادی امروز، قطعا از نظر مالی متضرر می‌شوید. اما می‌دانیم همه افراد، یا اطلاعات لازم برای سرمایه گذاری را ندارند، یا به هر دلیلی توان ریسک کردن برای سرمایه گذاری را ندارند. آکولند ماموریت خود را در راستای همین مسئله تعریف می‌کند.
@@ -46,7 +51,7 @@ const AboutUs:NextPageWithLayout =() => {
                 <Text className="text-[#0C0349] text-center md:text-start md:mb-2" fontSize={isDesktop ? 'lg' : 'base'} fontWeight="bold">تیم آکولند</Text>
                 <div className="w-full flex flex-col md:flex-row gap-3 md:justify-between">
                 {Teams.map((item:any, index:number) => (
-                <TeamMember key={index} imageSrc={item.image} name={item.name} jobTitle={item.job} />
+                <TeamMember key={index} imageSrc={item.image} name={item.name} jobTitle={item.job} likdin={item.linkdin} />
                 ))}
                 </div>
             </div>
