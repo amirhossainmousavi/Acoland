@@ -203,8 +203,8 @@ const handleSubmitCommiutyForm = () =>{
        <Support /> 
        <div className='w-full h-36 bg-[#F9F9F9] flex mb-8'>
         <div className='w-full md:w-[85%] flex items-center justify-center md:mt-4 mt-2 gap-16 px-4'>
-          {Logos().map((item:any) =>(
-            <Link href={item.link}>
+          {Logos().map((item:any, index:number) =>(
+            <Link href={item.link} key={index}>
               <Image src={item.image} alt={item.link} width={item.width} height={item.height} />
             </Link>
           ))}

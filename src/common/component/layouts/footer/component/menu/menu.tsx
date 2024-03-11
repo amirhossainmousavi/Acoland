@@ -13,8 +13,8 @@ export const Menu = () =>{
             <nav className='flex flex-col justify-start w-full'>
               <ul className="flex flex-col justify-start mb-3">
                 <li>
-                    {PageList().map((item:any) => (
-                        <Link prefetch={false} href={item.link ?? '#'} className={classNames("block text-[0.9rem] font-medium text-start cursor-pointer my-2 text-white")} >
+                    {PageList().map((item:any, index:number) => (
+                        <Link prefetch={false} key={index} href={item.link ?? '#'} className={classNames("block text-[0.9rem] font-medium text-start cursor-pointer my-2 text-white")} >
                           {item.title}
                         </Link>
                     ))}

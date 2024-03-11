@@ -11,8 +11,8 @@ export const Info =()=>{
         <Logo height={130} width={130} />
         <Text className="block text-white leading-8 text-center md:text-start" fontSize="sm">آکولند، مرجع تخصصی سرمایه گذاری روی زمین، امکان سرمایه‌گذاری سودآور، بدون ریسک و با خاطر آسوده بابت مشکلات و مسائل حقوقی را برای شما فراهم می‌کند.</Text>
         <div className="flex items-center gap-4 md:gap-8">
-        {SocialIcon().map((item:any) => (
-            <Link href={item.link}>
+        {SocialIcon().map((item:any,index:number) => (
+            <Link href={item.link} key={index}>
                 <Image src={item.icon} alt={item.alt} width={item.size ?? 30} height={item.size ?? 30} />
             </Link>
         ))}

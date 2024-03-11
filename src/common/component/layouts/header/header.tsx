@@ -48,8 +48,8 @@ const Header = (props: HeaderProps) => {
                 "mb-0": router.pathname !=='/'
               })}>
                 <li ref={ref}>
-                    {PageList().map((item:any) => (
-                        <Link prefetch={false} href={item.link ?? '#'} className={classNames("inline-block text-[0.9rem] font-medium text-center cursor-pointer mx-5 text-white", {
+                    {PageList().map((item:any, index:number) => (
+                        <Link prefetch={false} key={index} href={item.link ?? '#'} className={classNames("inline-block text-[0.9rem] font-medium text-center cursor-pointer mx-5 text-white", {
                          "text-[#66D178] border-solid border-b-[#66D178] border-b-[3px]":item.isActiveRoute,
                         })} >
                           {item.title}
