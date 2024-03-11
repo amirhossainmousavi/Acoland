@@ -2,13 +2,13 @@ import Text from "@/common/component/atom/text";
 import useResponsive from "@/common/hooks/useResponsive";
 import Image from "next/image";
 
-interface StatisticsCard {
+interface StatisticsCardProps {
     image: string;
     title: string;
     description: string
 }
 
-export const StatisticsCard = (props: StatisticsCard) =>{
+export const StatisticsCard = (props: StatisticsCardProps) =>{
     const {description,title,image} = props;
     const {isDesktop} = useResponsive()
     return(<>
