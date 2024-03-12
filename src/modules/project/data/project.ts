@@ -147,7 +147,7 @@ export const ProjectData = () =>{
                     },
                     {
                         text:"مسکونی",
-                        name:"زمین",
+                        name:"نوع زمین",
                         type:"string",
                         icon: PixelIcon,
                     },

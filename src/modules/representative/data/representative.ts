@@ -49,7 +49,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"مسکونی",
-                            name:"زمین",
+                            name:"نوع زمین",
                             type:"string",
                             icon: PixelIcon,
                         },
@@ -61,7 +61,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"320 متر",
-                            name:"متراژ زمین",
+                            name:"متراژ کل زمین",
                             type:"string",
                             icon: ExcessIcon
                         },
@@ -108,7 +108,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"مسکونی",
-                            name:"زمین",
+                            name:"نوع زمین",
                             type:"string",
                             icon: PixelIcon,
                         },
@@ -120,7 +120,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"320 متر",
-                            name:"متراژ زمین",
+                            name:"متراژ کل زمین",
                             type:"string",
                             icon: ExcessIcon
                         },
@@ -167,7 +167,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"مسکونی",
-                            name:"زمین",
+                            name:"نوع زمین",
                             type:"string",
                             icon: PixelIcon,
                         },
@@ -179,7 +179,7 @@ export const representativeData = () =>{
                         },
                         {
                             text:"320 متر",
-                            name:"متراژ زمین",
+                            name:"متراژ کل زمین",
                             type:"string",
                             icon: ExcessIcon
                         },

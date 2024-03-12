@@ -29,7 +29,7 @@ const MobileNavbar = (props: MobileNavbarProps) => {
             </div>
           )}
           {shouldShowBrand && (
-            <Link href="/" shallow prefetch={false} className='absolute left-4'>
+            <Link href="/" shallow prefetch={false} className='absolute left-0'>
               <Logo
                   width={80}
                   height={80}
