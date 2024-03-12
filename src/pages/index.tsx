@@ -155,14 +155,14 @@ const handleSubmitCommiutyForm = () =>{
             <div className='flex flex-col gap-1 md:gap-3 items-center md:items-start w-full md:w-2/4 md:mt-12'>
             <Text className='block text-[#35B34A]' fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold'>به جمع 1500+ عضو</Text>
             <Text className='block text-[#08004D] leading-7' fontSize={isDesktop ? 'lg' : 'base'}>جامعه سرمایه گذاران آکولند بپیوندید</Text>
-            <Text className='block text-[#373737] leading-7 text-center md:text-md' fontSize='sm'>با عضویت در باشگاه مشتریان آکولند، زودتر از دیگران از فرصت‌های سودآور سرمایه گذاری و شرایط ویژه ما مطلع شوید!</Text>
+            <Text className='block text-[#373737] leading-7 text-center md:text-md md:text-start' fontSize='sm'>با عضویت و پیوستن در باشگاه مشتریان آکولند، زودتر از دیگران از فرصت‌های سودآور سرمایه گذاری و شرایط ویژه ما مطلع شوید!</Text>
               <div className='flex flex-col gap-4 mt-2 md:mt-0'>
               {CommunityData.map((item:any, index:number) =>(
                   <Text key={index} className='flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]' fontSize={isDesktop?'base' : 'sm'} fontWeight='bold'><Image src={item.icon} alt={item.text} width={isDesktop ? 30: 50} height={isDesktop ? 30: 50} />{item.text}</Text>
               ))}
               </div>
               <div className='flex flex-col gap-4'>
-                <Text className='block text-[#373737] leading-7 text-center md:text-start mt-4 md:mt-0' fontSize={isDesktop ? 'lg' : 'base'}>برای عضویت به جامعه سرمایه گذاران شماره موبایل خود را وارد کنید</Text>
+                <Text className='block text-[#373737] leading-7 text-center md:text-start mt-4 md:mt-0' fontSize={isDesktop ? 'base' : 'sm'}>برای عضویت به جامعه سرمایه گذاران شماره موبایل خود را وارد کنید</Text>
                 <div className='flex items-center'>
                   <TextField type='text' placeholder='شماره موبایل را وارد کنید'  className='bg-[#F9F9F9] focus-visible:outline-none p-7 text-black border-none rounded-l-none' onChange={(e:any) => setPhoneNumber(e.target.value)} />
                   <Button className='bg-[#35B34A] p-7 text-white rounded-r-none w-36' onClick={handleSubmitCommiutyForm}>ارسال</Button>

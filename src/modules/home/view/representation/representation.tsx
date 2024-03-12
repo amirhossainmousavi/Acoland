@@ -92,7 +92,7 @@ export const Representation = () =>{
         console.log(!!representationFormData.province.value);
         
         if (isValidForm && !!representationFormData.province.value && !!representationFormData.city.value) {
-            toast.success('درخواست مشاوره شما با موفقیت ثبت گردید.')
+            toast.success('درخواست مشاوره شما با موفقیت ثبت شد.')
         } else {            
             toast.error(Object.values(updatedInformationData)?.find?.((item:any) => !item?.isValid)?.helperText ?? 'لطفا شهر و استان خود را انتخاب کنید.')
         }

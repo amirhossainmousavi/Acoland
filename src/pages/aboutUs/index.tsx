@@ -13,27 +13,29 @@ const AboutUs:NextPageWithLayout =() => {
     const {publicRuntimeConfig} = getConfig();
     const {isDesktop} = useResponsive();
     const infoVideo ='<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/Olnm2/vt/frame"  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>'
-    return <div className="w-full p-2 md:p-0">
-        <div className="w-full flex flex-col gap-3 items-center justify-center h-[40rem] bg-white bg-no-repeat bg-cover bg-center" style={{backgroundImage:`url(${publicRuntimeConfig.LIARA_IMAGE_S3_HOST}/Projects/background.png`}}>
+    return <div className="w-full">
+        <div className="w-full flex flex-col gap-3 items-center justify-center h-[40rem] bg-white bg-no-repeat bg-cover bg-center" style={{backgroundImage:`url(${publicRuntimeConfig.LIARA_IMAGE_S3_HOST}/AboutUs/aboutUs.webp`}}>
             <div className="w-[85%] h-full flex flex-col gap-3 items-center justify-center">
-            <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold' className='block text-[#08004D] text-center'>بیش از ۱۰۰ میلیارد تومان سود برای شما</Text>
-            <Text fontSize={isDesktop?'base' : 'sm'} className='block text-[#66D178] md:w-[65%] text-center leading-7'>طی ۲ سال فعالیت در آکولند</Text>
+            <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight='bold' className='block text-white text-center'>بیش از ۱۰۰ میلیارد تومان سود برای شما</Text>
+            <Text fontSize={isDesktop?'base' : 'sm'} className='block text-white md:w-[65%] text-center leading-7'>طی ۲ سال فعالیت در آکولند</Text>
             </div>
         </div>
-        <div className="w-full flex justify-center">
-        <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between justify-center md:items-center md:my-4">
+        <div className="w-full flex justify-center p-2 md:p-0 mt-3 md:mt-0">
+        <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between justify-center md:items-center md:mt-4 md:-mb-3">
                 <div className="md:w-[50%] w-full flex flex-col gap-3">
                 <Text fontSize={isDesktop ? 'lg' : 'base'} fontWeight="bold" className="text-[#0C0349] text-center md:text-start" >داستان آکولند</Text>
                 <Text fontSize="sm" fontWeight="medium" className="leading-8 text-justify md:text-start">مهندس علیرضا عمویی در سال ۱۴۰۰، پس از ۳ سال آموزش در حوزه املاک و مستغلات، اولین پروژه سرمایه گذاری در بازار املاک را تعریف کرد. چیزی که باعث شد اولین پروژه سرمایه گذاری در این مجموعه تعریف شود، تقاضای دانش‌پذیران (دوره جامع تجارت املاک) بود.
-                    در واقع سال‌ها آموزش، اعتماد دانش‌پذیران را به تخصص، صداقت و سلامت عملکرد ما جلب کرده بود. در کنار این اعتماد، نیاز به سرمایه گذاری با ریسک کم و سود بالا، تقاضای زیادی را برای تعریف پروژه‌های سرمایه گذاری تخصصی روی زمین با اجرا و مدیریت مهندس علیرضا عمویی را ایجاد کرد.</Text>
+                    در واقع سال‌ها آموزش، اعتماد دانش‌پذیران را به تخصص، صداقت و سلامت عملکرد ما جلب کرده بود. در کنار این اعتماد، نیاز به سرمایه گذاری با ریسک کم و سود بالا، تقاضای زیادی را برای تعریف پروژه‌های سرمایه گذاری تخصصی روی زمین با اجرا و مدیریت مهندس علیرضا عمویی ایجاد کرد.</Text>
                 </div>
                 <div className="md:w-[45%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg overflow-hidden">
                   <div dangerouslySetInnerHTML={{__html:infoVideo}} className="w-full h-full" />
                 </div>
             </div>
         </div>
+        <div className="p-2 md:p-0">
         <Statistics />
-        <div className="w-full flex justify-center">
+        </div>
+        <div className="w-full flex justify-center p-2 md:p-0">
             <div className="w-full md:w-[85%] flex flex-col-reverse md:flex-row md:justify-between md:items-center justify-center my-4">
                     <div className="md:w-[45%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 [&>div>iframe]:rounded-lg overflow-hidden">
                       <div dangerouslySetInnerHTML={{__html:infoVideo}} className="w-full h-full" />
@@ -46,7 +48,7 @@ const AboutUs:NextPageWithLayout =() => {
                     </div>
                 </div>
         </div>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center p-2 md:p-0">
             <div className="w-full md:w-[85%] flex flex-col gap-4 justify-center items-center md:my-8">
                 <Text className="text-[#0C0349] text-center md:text-start md:mb-2" fontSize={isDesktop ? 'lg' : 'base'} fontWeight="bold">تیم آکولند</Text>
                 <div className="w-full flex flex-col md:flex-row gap-3 md:justify-between">
@@ -56,7 +58,7 @@ const AboutUs:NextPageWithLayout =() => {
                 </div>
             </div>
         </div>
-          <div className="mb-4 md:-mt-6">
+          <div className="mb-4 md:-mt-6 p-2 md:p-0">
         <Support />
           </div>
     </div>

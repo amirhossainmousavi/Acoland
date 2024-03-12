@@ -28,7 +28,7 @@ export const PageList = () =>{
         {
           id: 4,
           title: "مقالات",
-          link:"#",
+          link:"https://acolandblog.liara.run/",
           inOutPage:true
         },
         {

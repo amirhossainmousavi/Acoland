@@ -140,7 +140,7 @@ export const ProjectsCard = () => {
     };
 
     return (
-        <div className="md:w-[85%] p-2 md:p-0 flex flex-col justify-center items-center mt-4">
+        <div className="md:w-[85%] w-full p-2 md:p-0 flex flex-col justify-center items-center mt-4">
             <div className='flex justify-center flex-col md:flex-row gap-3 w-full'>
                 <Autocomplete
                     searchable
@@ -213,16 +213,16 @@ const LoadingCard = () =>{
         <div className='flex  flex-col-reverse md:flex-row w-full md:w-[49.5%] gap-2 p-3 border border-[#BBBCBC] border-solid rounded-md'>
             <div className='flex flex-col justify-between'>
                 <div className='flex flex-col gap-3'>
-                    <Skeleton w={isDesktop ? "19rem" : "21rem"} h={isDesktop ? "3rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "21rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "21rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "21rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "21rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "3rem" : "1rem"} rounded='md' />
+                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
                 </div>
-                <Skeleton w={isDesktop ? "19rem" : "21rem"} h='3rem' rounded='md' className='mt-6' />
+                <Skeleton w={isDesktop ? "19rem" : "23rem"} h='3rem' rounded='md' className='mt-6' />
             </div>
             <div>
-                <Skeleton w='21rem' h={isDesktop ? "17rem" : "10rem"} rounded='md' />
+                <Skeleton w='23rem' h={isDesktop ? "17rem" : "10rem"} rounded='md' />
             </div>
         </div>
     );
