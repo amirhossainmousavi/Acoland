@@ -1,8 +1,7 @@
-
-import { useRef, useState } from 'react';
-import { useClickAway } from 'react-use';
-import { MenuItem } from './menuItem';
-import SidebarItem from './sidebarItem';
+import { useRef, useState } from "react";
+import { useClickAway } from "react-use";
+import { MenuItem } from "./menuItem";
+import SidebarItem from "./sidebarItem";
 
 const SidebarNav = ({ menu }: { menu: MenuItem }) => {
   const [open, setOpen] = useState(false);
@@ -14,12 +13,12 @@ const SidebarNav = ({ menu }: { menu: MenuItem }) => {
         setOpen(false);
       }
     },
-    ['click'],
+    ["click"]
   );
 
   return (
     <li className="border-b border-slate-200" ref={ref}>
-      <SidebarItem  title={menu.title} link={menu.link} />
+      <SidebarItem title={menu.title} link={menu.link} />
     </li>
   );
 };

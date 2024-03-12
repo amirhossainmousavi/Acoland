@@ -1,14 +1,19 @@
-import React from 'react';
-import Text from '../text';
+import React from "react";
+import Text from "../text";
 
 interface TeamMemberProps {
   name: string;
   jobTitle: string;
   imageSrc: string;
-  likdin:string
+  likdin: string;
 }
 
-const TeamMember: React.FC<TeamMemberProps> = ({ name, jobTitle, imageSrc, likdin }) => {
+const TeamMember: React.FC<TeamMemberProps> = ({
+  name,
+  jobTitle,
+  imageSrc,
+  likdin,
+}) => {
   return (
     <div className="w-full md:w-[24%] bg-cover h-[23rem] bg-center bg-no-repeat rounded-lg lg:rounded-lg relative overflow-hidden">
       <div className="absolute inset-0 bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
@@ -17,7 +22,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, jobTitle, imageSrc, likdi
           <Text className="text-sm text-white">{jobTitle}</Text>
         </div>
       </div>
-      <div className="w-full h-full bg-no-repeat bg-cover bg-center" style={{backgroundImage: `url(${imageSrc})`}}></div>
+      <div
+        className="w-full h-full bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: `url(${imageSrc})` }}
+      ></div>
     </div>
   );
 };

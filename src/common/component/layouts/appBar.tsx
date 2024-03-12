@@ -1,8 +1,8 @@
-import classNames from '@/common/utils/classNames';
-import Text from '@/common/component/atom/text';
-import { useRouter } from 'next/router';
-import { HTMLAttributes } from 'react';
-import Skeleton from '../atom/skeleton';
+import classNames from "@/common/utils/classNames";
+import Text from "@/common/component/atom/text";
+import { useRouter } from "next/router";
+import { HTMLAttributes } from "react";
+import Skeleton from "../atom/skeleton";
 
 interface AppBarProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -10,13 +10,31 @@ interface AppBarProps extends HTMLAttributes<HTMLDivElement> {
   titleLoading?: Boolean;
 }
 
-export const AppBar = ({ title, backButton, titleLoading = false, className, ...rest }: AppBarProps) => {
+export const AppBar = ({
+  title,
+  backButton,
+  titleLoading = false,
+  className,
+  ...rest
+}: AppBarProps) => {
   const router = useRouter();
   return (
-    <div className={classNames('flex sticky top-0 items-center h-14 px-6 bg-white border-b border-slate-100 z-40', className)} {...rest}>
+    <div
+      className={classNames(
+        "flex sticky top-0 items-center h-14 px-6 bg-white border-b border-slate-100 z-40",
+        className
+      )}
+      {...rest}
+    >
       {backButton && (
         <div onClick={router.back} className="ml-2 -mr-3 cursor-pointer">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               fillRule="evenodd"
               clipRule="evenodd"

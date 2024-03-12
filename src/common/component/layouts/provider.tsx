@@ -1,9 +1,9 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 // import TagManager from 'react-gtm-module';
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
-const Provider = ({ children }: { children: React.ReactNode;}) => {
+const Provider = ({ children }: { children: React.ReactNode }) => {
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -14,7 +14,7 @@ const Provider = ({ children }: { children: React.ReactNode;}) => {
             retry: false,
           },
         },
-      }),
+      })
   );
 
   useEffect(() => {
@@ -25,12 +25,12 @@ const Provider = ({ children }: { children: React.ReactNode;}) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-            {children}
+      {children}
       <Toaster
         position="top-left"
         toastOptions={{
           style: {
-            padding: '1rem',
+            padding: "1rem",
           },
           duration: 3000,
         }}

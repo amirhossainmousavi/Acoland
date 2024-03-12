@@ -1,12 +1,12 @@
-import Logo from '@/common/component/atom/logo';
-import ChevronIcon from '@/common/component/icons/chevron';
-import dynamic from 'next/dynamic';
-import { useEffect } from 'react';
-import BackDrop from './backdrop';
-import { MenuItem } from './menuItem';
-import SidebarNav from './sidebarNav';
-import LogoImageMobile from '@/common/assets/ACOLAND-ENGLISH-MAIN.png'
-const Transition = dynamic(() => import('@/common/component/atom/transition'));
+import Logo from "@/common/component/atom/logo";
+import ChevronIcon from "@/common/component/icons/chevron";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
+import BackDrop from "./backdrop";
+import { MenuItem } from "./menuItem";
+import SidebarNav from "./sidebarNav";
+import LogoImageMobile from "@/common/assets/ACOLAND-ENGLISH-MAIN.png";
+const Transition = dynamic(() => import("@/common/component/atom/transition"));
 
 interface SidebarProps {
   closeSidebar: () => void;
@@ -20,9 +20,9 @@ interface SidebarProps {
 const Sidebar = ({ menus, closeSidebar, isOpen }: SidebarProps) => {
   useEffect(() => {
     if (isOpen) {
-      return document.body.classList.add('overflow-hidden');
+      return document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     }
   }, [isOpen]);
 
@@ -48,7 +48,7 @@ const Sidebar = ({ menus, closeSidebar, isOpen }: SidebarProps) => {
           </button>
         </div>
         <ul>
-          {menus.map(menu => (
+          {menus.map((menu) => (
             <SidebarNav key={menu.id} menu={menu} />
           ))}
         </ul>
