@@ -211,18 +211,18 @@ const LoadingCard = () =>{
     const {isDesktop} = useResponsive()
     return (
         <div className='flex  flex-col-reverse md:flex-row w-full md:w-[49.5%] gap-2 p-3 border border-[#BBBCBC] border-solid rounded-md'>
-            <div className='flex flex-col justify-between'>
-                <div className='flex flex-col gap-3'>
-                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "3rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
-                    <Skeleton w={isDesktop ? "19rem" : "23rem"} h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+            <div className='flex flex-col justify-between w-full'>
+                <div className='flex flex-col gap-3 w-full'>
+                    <Skeleton w="100%" h={isDesktop ? "3rem" : "1rem"} rounded='md' />
+                    <Skeleton w="100%" h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w="100%" h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w="100%" h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
+                    <Skeleton w="100%" h={isDesktop ? "1.5rem" : "1rem"} rounded='md' />
                 </div>
-                <Skeleton w={isDesktop ? "19rem" : "23rem"} h='3rem' rounded='md' className='mt-6' />
+                <Skeleton w="100%" h='3rem' rounded='md' className='mt-6' />
             </div>
-            <div>
-                <Skeleton w='23rem' h={isDesktop ? "17rem" : "10rem"} rounded='md' />
+            <div className='w-full'>
+                <Skeleton w="100%"  h={isDesktop ? "17rem" : "10rem"} rounded='md' />
             </div>
         </div>
     );
