@@ -36,10 +36,10 @@ const Representatives: NextPageWithLayout = () => {
           </Text>
         </div>
       </div>
-      <div className="w-full justify-center flex z-[5]">
+      <div className="w-full justify-center  flex z-[5]">
         <RepresentationList />
       </div>
-      <div className="mb-4 z-0">
+      <div className="mb-6 mt-4 md:mt-0 z-0">
         <Representation />
       </div>
     </>

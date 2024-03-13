@@ -19,6 +19,7 @@ export const ProjectsCard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isNotFound, setIsnotfound] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const { isDesktop } = useResponsive();
   const provinces = Province.map((item) => ({
     label: item.name,
     value: item.name,
@@ -151,6 +152,13 @@ export const ProjectsCard = () => {
 
   return (
     <div className="md:w-[85%] w-full p-2 md:p-0 flex flex-col justify-center items-center mt-4">
+      <Text
+        fontSize={isDesktop ? "base" : "sm"}
+        className="flex justify-center items-center gap-2 flex-row-reverse mb-4 text-center md:text-start"
+      >
+        شما میتوانید با فیلتر کردن پروژه های موجود، سریعتر پروژه متناسب با خود
+        را پیدا کنید!
+      </Text>
       <div className="flex justify-center flex-col md:flex-row gap-3 w-full">
         <Autocomplete
           searchable
@@ -195,7 +203,7 @@ export const ProjectsCard = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="w-full flex mt-4 gap-3 md:flex-row flex-col md:flex-wrap">
+      <div className="w-full flex mt-8 gap-8 md:gap-3 md:flex-row flex-col md:flex-wrap">
         {isLoading ? (
           <>
             <LoadingCard />

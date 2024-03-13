@@ -119,7 +119,7 @@ export const Representation = () => {
     <>
       <div className="p-2 md:p-0 flex items-center relative justify-center w-full z-50 ">
         <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between md:mt-4 gap-2 md:gap-3">
-          <div className="w-full items-center md:items-start text-center md:text-start md:w-[50%] flex flex-col gap-2 md:gap-3 md:mt-6">
+          <div className="w-full items-center md:items-start text-center md:text-start md:w-[50%] flex flex-col gap-3 md:gap-3 md:mt-6">
             <Text
               className="flex flex-col gap-3 text-[#35B34A]"
               fontSize={isDesktop ? "lg" : "base"}
@@ -144,7 +144,7 @@ export const Representation = () => {
               زمین، با ارائه خدمات جامع و تخصصی، به دنبال افراد با انگیزه و
               توانمند برای همکاری به شکل نمایندگی است.
             </Text>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-12 md:gap:6">
               {representationData.map((item: any, index: number) => (
                 <Text
                   key={index}

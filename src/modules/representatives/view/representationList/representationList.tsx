@@ -156,7 +156,7 @@ export const RepresentationList = () => {
           onChange={handleInputChange}
         />
       </div>
-      <div className="w-full md:h-[40rem] mt-4 overflow-x-auto rounded-2xl">
+      <div className="w-full md:h-[40rem] mt-8 md:mt-4 overflow-x-auto rounded-2xl">
         <div className=" min-w-max md:w-full bg-[#F9F9F9] md:flex-nowrap ">
           <div className="bg-[#08004D] w-full h-24 rounded-t-2xl flex items-center flex-nowrap ">
             <Text className="w-[25%] md:w-1/5 block text-white text-center">

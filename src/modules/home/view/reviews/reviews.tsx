@@ -16,7 +16,7 @@ export const Reviews = (props: ReviewsProps) => {
   const { VideoData, description, rateData, title, titleStyle } = props;
   const { isDesktop } = useResponsive();
   return (
-    <div className="p-2 md:p-0 flex justify-center w-full md:mt-8 ">
+    <div className="p-2 md:p-0 flex justify-center w-full md:mt-8  my-6">
       <div className="w-full md:w-[85%] flex flex-col md:justify-between mt-4 gap-4">
         <div className="gap-2 md:gap-3 text-center flex flex-col w-full">
           <Text

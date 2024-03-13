@@ -105,9 +105,9 @@ const Home: NextPageWithLayout = () => {
             </Text>
           </div>
         </div>
-        <div className="p-2 md:p-0 flex items-center relative justify-center w-full z-50 ">
-          <div className="w-full md:w-[85%] flex flex-col md:flex-row md:items-center md:justify-between mt-4 gap-2 md:gap-3">
-            <div className="w-full items-center md:items-start text-center md:text-start md:w-[50%] flex flex-col gap-2 md:gap-3">
+        <div className="p-2 md:p-0 flex items-center relative justify-center w-full my-6 z-50 ">
+          <div className="w-full md:w-[85%] flex flex-col md:flex-row md:items-center md:justify-between mt-4 gap-4 md:gap-3">
+            <div className="w-full items-center md:items-start text-center md:text-start md:w-[50%] flex flex-col gap-4  md:gap-3">
               <Text
                 className="flex flex-col gap-3"
                 fontSize="lg"
@@ -182,9 +182,9 @@ const Home: NextPageWithLayout = () => {
             )}
           </div>
         </div>
-        <div className="p-2 md:p-0 flex items-center justify-center w-full relative">
-          <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-6 gap-2 md:gap-3">
-            <div className="w-full text-center md:text-start flex justify-center flex-col gap-2 md:gap-3">
+        <div className="p-2 md:p-0 flex items-center justify-center my-6 w-full relative">
+          <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-6 gap-5 md:gap-3">
+            <div className="w-full text-center md:text-start flex justify-center flex-col gap-5 md:gap-3">
               <Text
                 className="block text-[#35B34A]"
                 fontSize={isDesktop ? "lg" : "base"}
@@ -223,9 +223,9 @@ const Home: NextPageWithLayout = () => {
             )}
           </div>
         </div>
-        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 mt-4">
+        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 my-6">
           <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4">
-            <div className="gap-2 md:gap-3 text-center md:text-start flex flex-col w-full">
+            <div className="gap-5 md:gap-3 text-center md:text-start flex flex-col w-full">
               <Text
                 className="block text-[#35B34A]"
                 fontSize={isDesktop ? "lg" : "base"}
@@ -243,7 +243,7 @@ const Home: NextPageWithLayout = () => {
               </Text>
             </div>
             <div className="w-full mb-4">
-              <div className="flex flex-col md:flex-row gap-2 p-2 overflow-x-auto">
+              <div className="flex flex-col md:flex-row gap-8 md:gap-2 p-2 overflow-x-auto">
                 {ProjectData.slice(0, 3).map((item: any, index: number) => (
                   <div
                     key={index}
@@ -267,7 +267,7 @@ const Home: NextPageWithLayout = () => {
           VideoData={VideoData}
           rateData={rateData}
         />
-        <div className="p-2 md:p-0 flex justify-center w-full md:mt-8 ">
+        <div className="p-2 md:p-0 flex justify-center w-full md:mt-8 my-6 ">
           <div className="w-full md:w-[85%] flex md:justify-between md:mt-4 gap-4">
             {isDesktop && (
               <div className="w-2/5 z-50">
@@ -280,7 +280,7 @@ const Home: NextPageWithLayout = () => {
                 />
               </div>
             )}
-            <div className="flex flex-col gap-1 md:gap-3 items-center md:items-start w-full md:w-2/4 md:mt-12">
+            <div className="flex flex-col gap-2 md:gap-3 items-center md:items-start w-full md:w-2/4 md:mt-12">
               <Text
                 className="block text-[#35B34A]"
                 fontSize={isDesktop ? "lg" : "base"}
@@ -301,7 +301,7 @@ const Home: NextPageWithLayout = () => {
                 با عضویت در باشگاه مشتریان آکولند، شما به جمع بیش از 1500
                 سرمایه‌گذار موفق می‌پیوندید و از مزایای زیر بهره‌مند خواهید شد:
               </Text>
-              <div className="flex flex-col gap-4 mt-2 md:mt-0">
+              <div className="flex flex-col gap-12 md:gap-7 mt-2 md:mt-0">
                 {CommunityData.map((item: any, index: number) => (
                   <Text
                     key={index}
@@ -345,7 +345,7 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
         </div>
-        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 mt-4 relative">
+        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 my-6 relative">
           <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4 z-50">
             <div className="gap-2 md:gap-3 text-center md:text-center flex flex-col w-full">
               <Text
@@ -359,7 +359,7 @@ const Home: NextPageWithLayout = () => {
                 </span>
               </Text>
             </div>
-            <div className="flex flex-col md:flex-row md:flex-wrap gap-3 md:mt-4 w-full overflow-auto">
+            <div className="flex flex-col md:flex-row md:flex-wrap md:gap-3 gap-8 md:mt-4 w-full overflow-auto">
               {BlogData.map((blog: any, index: number) => (
                 <Blogs
                   key={index}
@@ -384,7 +384,7 @@ const Home: NextPageWithLayout = () => {
         </div>
         <Representation />
         <Support />
-        <div className="w-full h-36 bg-[#F9F9F9] flex mb-8">
+        <div className="w-full h-36 bg-[#F9F9F9] flex my-6">
           <div className="w-full md:w-[85%] flex items-center justify-center md:mt-4 mt-2 gap-16 px-4">
             {Logos().map((item: any, index: number) => (
               <Link href={item.link} key={index}>

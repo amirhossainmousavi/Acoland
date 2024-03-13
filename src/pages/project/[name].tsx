@@ -61,7 +61,7 @@ const ProjectPage: NextPageWithLayout = () => {
             imagesCalssName="!h-[90%]"
           />
         </div>
-        <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between md:my-4">
+        <div className="w-full md:w-[85%] flex flex-col md:flex-row md:justify-between my-4 md:my-4">
           <div className="md:w-[55%] w-full flex flex-col gap-3">
             <Text
               fontSize={isDesktop ? "lg" : "base"}
@@ -77,7 +77,7 @@ const ProjectPage: NextPageWithLayout = () => {
               className="leading-8 text-justify md:text-start"
             />
           </div>
-          <div className="md:w-[40%] w-full md:max-h-[23rem] rounded-md mt-4 md:mt-0 overflow-hidden">
+          <div className="md:w-[40%] w-full md:max-h-[23rem] rounded-md my-6 md:mt-0 overflow-hidden">
             <div
               dangerouslySetInnerHTML={{ __html: data.video }}
               className="w-full h-full"
@@ -93,7 +93,7 @@ const ProjectPage: NextPageWithLayout = () => {
             >
               چرا باید بر روی {data.name} سرمایه گذاری کنیم؟
             </Text>
-            <div className="flex w-[85%] flex-col md:flex-row md:justify-between items-center gap-6 my-5">
+            <div className="flex w-[85%] flex-col md:flex-row md:justify-between items-center gap-12 md:gap-6 my-5">
               {data.investment_reasons?.map((item: any, index: number) => (
                 <div
                   key={index}
@@ -141,7 +141,7 @@ const ProjectPage: NextPageWithLayout = () => {
             >
               مقایسه رشد {data.name} با سایز بازار ارزی
             </Text>
-            <div className="w-full flex flex-wrap gap-6">
+            <div className="w-full flex flex-wrap gap-12 md:gap-6">
               {data?.comparisons?.map((item: any, index: number) => (
                 <ProgressBar
                   key={index}
@@ -155,7 +155,7 @@ const ProjectPage: NextPageWithLayout = () => {
           </div>
         </div>
         <div className="w-full flex justify-center items-center">
-          <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-6 gap-3">
+          <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-10 gap-3">
             <Text
               fontSize={isDesktop ? "lg" : "base"}
               fontWeight="bold"
@@ -170,7 +170,7 @@ const ProjectPage: NextPageWithLayout = () => {
           </div>
         </div>
         <div className="w-full flex justify-center items-center ">
-          <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-4 gap-3 bg-[#08004D] py-10 rounded-lg">
+          <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-8 mb-4 gap-3 bg-[#08004D] py-10 rounded-lg">
             <Text
               onClick={handleOpen}
               fontSize={isDesktop ? "base" : "sm"}

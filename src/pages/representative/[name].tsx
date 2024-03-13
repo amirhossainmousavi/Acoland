@@ -51,7 +51,7 @@ const RepresentativePage: NextPageWithLayout = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center md:my-5">
+          <div className="flex flex-col items-center my-6">
             <Text
               className="text-[#08004D] text-center md:text-start"
               fontSize={isDesktop ? "lg" : "base"}
@@ -60,7 +60,7 @@ const RepresentativePage: NextPageWithLayout = () => {
               پروژه هایی که توسط {data.gender === "man" ? "آقای" : "خانم"}{" "}
               {data.name} تعریف شده اند
             </Text>
-            <div className="flex flex-col md:flex-row md:flex-wrap w-full h-full gap-3 my-3 md:my-5">
+            <div className="flex flex-col md:flex-row md:flex-wrap w-full h-full gap-8 md:gap-2 my-3 md:my-5">
               {data?.project?.map((item: any, index: number) => (
                 <div
                   key={index}
@@ -77,7 +77,7 @@ const RepresentativePage: NextPageWithLayout = () => {
           </div>
         </div>
       </div>
-      <div className="mb-4 z-0">
+      <div className="mb-8 -mt-5  z-0">
         <Representation />
       </div>
     </>

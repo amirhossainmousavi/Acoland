@@ -43,7 +43,7 @@ const Projects: NextPageWithLayout = () => {
       <div className="w-full justify-center flex">
         <ProjectsCard />
       </div>
-      <div className="w-full flex flex-col items-center md:mt-4 p-2 md:p-0">
+      <div className="w-full flex flex-col mt-3 items-center md:mt-4 p-2 md:p-0">
         <Text className="w-full text-center text-[#08004D]" fontWeight="bold">
           سوالات متداول
         </Text>
@@ -59,7 +59,7 @@ const Projects: NextPageWithLayout = () => {
           ))}
         </div>
       </div>
-      <div className="mb-4">
+      <div className="mb-4 mt-2">
         <Support />
       </div>
     </>

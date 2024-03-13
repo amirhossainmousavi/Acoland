@@ -6,7 +6,7 @@ import useResponsive from "@/common/hooks/useResponsive";
 export const Statistics = () => {
   const { isDesktop } = useResponsive();
   return (
-    <div className="flex p-2 md:p-0 justify-center w-full md:mt-8 mt-4 bg-[#F9F9F9] min-h-[15rem]">
+    <div className="flex p-2 md:p-0 justify-center w-full md:mt-8 my-6 bg-[#F9F9F9] min-h-[15rem]">
       <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between my-4 md:mt-8 gap-4">
         <div className="gap-2 md:gap-3 flex flex-col w-full items-center">
           <Text
