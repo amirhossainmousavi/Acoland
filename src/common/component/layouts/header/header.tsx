@@ -21,13 +21,12 @@ const Header = (props: HeaderProps) => {
   const router = useRouter();
   const isSpecialRoute =
     router.pathname === "/project/[name]" ||
-    router.pathname === "/representative/[name]";
+    router.pathname === "/representative/[name]" ||
+    router.pathname === "/projects";
   const ref = useRef(null);
   useClickAway(ref, () => {
     setOpen(false);
   });
-
-  console.log(router);
 
   return (
     <>

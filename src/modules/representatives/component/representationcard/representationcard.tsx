@@ -38,7 +38,7 @@ export const Representationcard = (props: RepresentationcardProps) => {
         <Text fontSize="sm">{phonNumber}</Text>
         <div
           onClick={() => location.assign(`tel:${phonNumber}`)}
-          className="bg-[#08004D] rounded-lg p-1 cursor-pointer relative -left-3 md:-left-14"
+          className="bg-[#35B34A] rounded-lg p-1 cursor-pointer relative -left-3 md:-left-14"
         >
           <PhoneIcon className="fill-white w-6 h-6" />
         </div>

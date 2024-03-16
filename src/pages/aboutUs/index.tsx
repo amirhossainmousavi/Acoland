@@ -8,6 +8,8 @@ import Support from "@/modules/home/view/support";
 import Statistics from "@/modules/home/view/statistics";
 import TeamMember from "@/common/component/atom/teamMember";
 import { Teams } from "@/modules/aboutUs/data/team";
+import ServicesData from "@/modules/home/data/services";
+import ServicesCard from "@/modules/home/component/servicesCard";
 
 const AboutUs: NextPageWithLayout = () => {
   const { publicRuntimeConfig } = getConfig();
@@ -107,6 +109,30 @@ const AboutUs: NextPageWithLayout = () => {
               بازار املاک جا نمانید، بلکه بتوانید با سرمایه گذاری بدون ریسک در
               این بازار، سود جذابی را بدست آورید.
             </Text>
+          </div>
+        </div>
+      </div>
+      <div className="p-2 md:p-0 flex items-center justify-center my-6 w-full relative">
+        <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-6 gap-5 md:gap-3">
+          <div className="w-full text-center md:text-start flex justify-center flex-col gap-5 md:gap-3">
+            <Text
+              className="block text-[#0C0349] text-center"
+              fontSize={isDesktop ? "lg" : "base"}
+              fontWeight="bold"
+            >
+              خدمات آکولند
+            </Text>
+          </div>
+          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-3 z-50 mt-4 md:mt-0">
+            {ServicesData.map((service: any) => (
+              <ServicesCard
+                key={service.id}
+                title={service.title}
+                description={service.description}
+                image={service.image}
+                link={service.link}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -129,10 +129,10 @@ export const Representation = () => {
             </Text>
             <Text
               className="flex flex-col gap-3 text-[#08004D]"
-              fontSize={isDesktop ? "lg" : "base"}
+              fontSize="base"
               fontWeight="bold"
             >
-              گام ‌اول به سوی موفقیت و پیشرفت شغلی
+              گامی مهم به سوی موفقیت و پیشرفت شغلی{" "}
             </Text>
             <Text className="block leading-7 text-[#373737]" fontSize="sm">
               آیا به دنبال فرصتی برای رشد و پیشرفت در حوزه سرمایه‌گذاری هستید؟

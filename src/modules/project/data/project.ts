@@ -20,13 +20,13 @@ export const ProjectData = () =>{
         video:"<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class='h_iframe-aparat_embed_frame'><span style='display: block;padding-top: 57%'></span><iframe src='https://www.aparat.com/video/video/embed/videohash/Olnm2/vt/frame' allowFullScreen='true' webkitallowfullscreen='true' mozallowfullscreen='true'></iframe></div>",
         description:"<p>محل تعریف پروژه آکولند ۳ نیز مانند پروژه پیشین، روستای گیل&zwnj;چالان از توابع رضوانشهر (گیلان) است. این پروژه با ۶۸۲۵ متر مربع مساحت، با مدل تجمیع سرمایه در آذر ماه سال ۱۴۰۰ تعریف شد.</p><p>با توجه به اینکه این پروژه در قالب ۱۰۰ سهم مشاعی عرضه شده، مساحت هر سهم از آن تقریبا معادل ۶۸ متر مربع است. قیمت اولیه هر سهم از این پروژه ۴۰ میلیون تومان و قیمت هر سهم از آن بعد از ۲۴ ماه به ۷۲ میلیون تومان رسیده است.</p><p>کاربری اولیه این زمین ۱۰۰٪ غیر مسکونی بوده است. با انجام مسطح&zwnj;سازی و فنس&zwnj;کشی دور این زمین برای ایجاد ارزش افزوده، قیمت آن طی ۲۴ ماه رشد 106 درصدی داشته است. لازم به ذکر است که دلار در بازه زمانی مشابه رشد ۷۹ درصدی داشته است.</p><ul><li>دارای اسناد و مدارک معتبر (نسق و تسلسل ایادی)</li>	<li>استراتژی ایجاد ارزش افزوده: تغییر کاربری، قطعه&zwnj;بندی و اخذ جواز ساخت</li></ul>",
         investment_reasons:[{
-            title:"٪106 سود در ۲۴ ماه ",
+            title:"٪۱۰۶ سود در ۲۴ ماه ",
             description: "موقعیت خوب پروژه باعث شده پیش از انجام اقدامات لازم برای ایجاد ارزش افزوده، رشد پروژه بیش از تورم باشد!",
             image:SaleICon
         },
         {
             title:"موقعیت مکانی عالی",
-            description: "17 دقیقه تا دریا، 19 دقیقه تا جنگل، 10 دقیقه تا رضوانشهر، 30 دقیقه تا بندر انزلی و ۴/۵ ساعت تا تهران!",
+            description: "۱۷ دقیقه تا دریا، ۱۹ دقیقه تا جنگل، ۱۰ دقیقه تا رضوانشهر، ۳۰ دقیقه تا بندر انزلی و ۴/۵ ساعت تا تهران!",
             image:FavoriteIcon
         },
         {
@@ -75,42 +75,42 @@ export const ProjectData = () =>{
     comparisons:[
         {
             title: 'رشد پروژه سوم آکولند',
-            score:"240",
+            score:"۲۴۰",
             percent:"85"
         },
         {
             title: 'رشد سکه',
-            score:"117",
+            score:"۱۱۷",
             percent:"72"
         },
         {
             title: 'رشد دلار',
-            score:"85",
+            score:"۸۵",
             percent:"43"
         },
         {
             title: 'شاخص کل بورس',
-            score:"120",
+            score:"۱۲۰",
             percent:"74"
         },
         {
             title: 'رشد سپرده گذاری',
-            score:"54",
+            score:"۵۴",
             percent:"23"
         },
         {
             title: 'رشد خودرو',
-            score:"117",
+            score:"۱۱۷",
             percent:"72"
         },
         {
             title: 'رشد بیت کوین',
-            score:"200",
+            score:"۲۰۰",
             percent:"80"
         },
         {
             title: 'میانگین قیمت مسکن تهران',
-            score:"117",
+            score:"۱۱۷",
             percent:"72"
         }
     ],
@@ -133,7 +133,7 @@ export const ProjectData = () =>{
                 },
                 info:[
                     {
-                        text:"تهران، تهران، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"تهران، تهران، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -152,37 +152,37 @@ export const ProjectData = () =>{
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-                        text:"از 100 متر تا 200 متر",
+                        text:"از ۱۰۰ متر تا ۲۰۰ متر",
                         name:"متراژ قطعات",
                         type:"string",
                         icon: AreaIcon
                     },
                     {
-                        text:"از 10 میلیون تومان تا 20 میلیون تومان",
+                        text:"از ۱۰ میلیون تومان تا ۲۰ میلیون تومان",
                         name:"قیمت هر متر مربع",
                         type:"string",
                         icon: MeasurementIcon
                     },
                     {
-                        text:"20 قطعه",
+                        text:"۲۰ قطعه",
                         name:"تعداد قطعات",
                         type:"string",
                         icon: AbacusIcon
                     },
                     {
-                        text:"10 قطعه",
+                        text:"۱۰ قطعه",
                         name:"تعداد قطعات باقی مانده",
                         type:"string",
                         icon: AbacusIcon

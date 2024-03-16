@@ -4,7 +4,6 @@ import { LayoutWithHeaderAndFooter } from "@/common/component/layouts/layoutWith
 import getConfig from "next/config";
 import Text from "@/common/component/atom/text";
 import useResponsive from "@/common/hooks/useResponsive";
-import Button from "@/common/component/atom/button";
 import Support from "@/modules/home/view/support";
 import ProjectsCard from "@/modules/projects/view/projects/projects";
 import Accordion from "@/common/component/atom/accordion";
@@ -15,32 +14,7 @@ const Projects: NextPageWithLayout = () => {
   const { isDesktop } = useResponsive();
   return (
     <>
-      <div
-        className="w-full flex flex-col gap-3 items-center justify-center h-[40rem] bg-white bg-no-repeat bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${publicRuntimeConfig.LIARA_IMAGE_S3_HOST}/Projects/Header-project.png`,
-        }}
-      >
-        <div className="w-[85%] h-full flex flex-col gap-3 items-center justify-center">
-          <Text
-            fontSize={isDesktop ? "lg" : "base"}
-            fontWeight="bold"
-            className="block text-white text-center"
-          >
-            بیش از ۱۰۰ میلیارد تومان سود برای شما
-          </Text>
-          <Text
-            fontSize={isDesktop ? "base" : "sm"}
-            className="block text-white md:w-[65%] text-center leading-7"
-          >
-            در صفحه پروژه‌ها، تمامی پروژه‌های زمینی موجود در آکولند گردآوری
-            شده‌اند. اینجا جایی است که شما می‌توانید به دنبال پروژه‌هایی با
-            پتانسیل سرمایه‌گذاری باشید و با دقت و هوشمندانه، بهترین انتخاب را
-            برای سرمایه‌گذاری خود داشته باشید
-          </Text>
-        </div>
-      </div>
-      <div className="w-full justify-center flex">
+      <div className="w-full justify-center flex md:mt-[6rem] mt-[5rem]">
         <ProjectsCard />
       </div>
       <div className="w-full flex flex-col mt-3 items-center md:mt-4 p-2 md:p-0">

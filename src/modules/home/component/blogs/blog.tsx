@@ -29,7 +29,7 @@ export const Blog = (props: BlogProps) => {
           />
         </div>
         <div className="flex flex-col justify-end gap-3 p-4 absolute bottom-0">
-          <Text fontSize="base" className="block text-white">
+          <Text fontSize="lg" className="block text-white">
             {title}
           </Text>
           <Text

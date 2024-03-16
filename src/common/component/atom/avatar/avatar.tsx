@@ -1,10 +1,10 @@
-import classNames from '@/common/utils/classNames';
-import { randomColor } from '@/common/utils/randomColor';
-import { ImageProps } from 'next/image';
-import Text from '../text';
+import classNames from "@/common/utils/classNames";
+import { randomColor } from "@/common/utils/randomColor";
+import { ImageProps } from "next/image";
+import Text from "../text";
 
 /* eslint-disable @next/next/no-img-element */
-interface AvatarProps extends Omit<ImageProps, 'alt' | 'src'> {
+interface AvatarProps extends Omit<ImageProps, "alt" | "src"> {
   /**
    * Width of the image in pixels
    * @default 70
@@ -24,8 +24,17 @@ interface AvatarProps extends Omit<ImageProps, 'alt' | 'src'> {
   src?: string;
 }
 
-export const Avatar: React.FC<AvatarProps> = props => {
-  const { src, width = 70, height = 70, className, name, as = 'img', alt = 'avatar', ...rest } = props;
+export const Avatar: React.FC<AvatarProps> = (props) => {
+  const {
+    src,
+    width = 70,
+    height = 70,
+    className,
+    name,
+    as = "img",
+    alt = "avatar",
+    ...rest
+  } = props;
 
   const Component = as;
 
@@ -35,18 +44,26 @@ export const Avatar: React.FC<AvatarProps> = props => {
       height={height}
       alt={alt}
       style={{ minWidth: width, height }}
-      className={classNames('rounded-full bg-gray', className)}
+      className={classNames("rounded-full bg-gray", className)}
       src={src}
       {...rest}
     />
   ) : (
     <div
-      style={{ width, height, ...(name?.trim() && { backgroundColor: randomColor(name ?? '') }) }}
-      className={classNames('rounded-full flex justify-center items-center bg-gray', className)}
+      style={{
+        width,
+        height,
+        ...(name?.trim() && { backgroundColor: "#D4A129" }),
+      }}
+      className={classNames(
+        "rounded-full flex justify-center items-center bg-gray",
+        className
+      )}
     >
       {name?.trim() && (
         <Text className="text-white tracking-tighter" fontWeight="medium">
-          {name.split(' ')[0]?.slice(0, 1) ?? ''} {name.split(' ')[1]?.slice(0, 1) ?? ''}
+          {name.split(" ")[0]?.slice(0, 1) ?? ""}{" "}
+          {name.split(" ")[1]?.slice(0, 1) ?? ""}
         </Text>
       )}
     </div>

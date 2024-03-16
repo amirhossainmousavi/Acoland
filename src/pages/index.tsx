@@ -28,6 +28,7 @@ import toast from "react-hot-toast";
 import ProjectCard from "@/common/component/atom/projectCard";
 import { ProjectData } from "@/common/data/project";
 import { useRouter } from "next/router";
+import PolygonIcon from "@/common/component/icons/polygon";
 
 const Home: NextPageWithLayout = () => {
   const { publicRuntimeConfig } = getConfig();
@@ -94,14 +95,14 @@ const Home: NextPageWithLayout = () => {
               className="block text-white text-center"
             >
               <span className="text-[#66D178]">آکولند، </span>مرجع تخصصی
-              سرمایه‌گذاری آسان، سودآور و امن.
+              سرمایه‌گذاری آسان، سودآور و امن
             </Text>
             <Text
               fontSize={isDesktop ? "base" : "sm"}
-              className="block text-[#66D178] text-center leading-7"
+              className="block text-[#D4A129] text-center leading-7"
             >
-              آکولند خیال شما را از بابت مسائل حقوقی و دغدغه‌های سرمایه‌گذاری
-              آسوده می‌کند.
+              آکولند خیال شما را درباره مسائل حقوقی و دغدغه‌های سرمایه‌گذاری
+              آسوده می‌کند
             </Text>
           </div>
         </div>
@@ -113,16 +114,16 @@ const Home: NextPageWithLayout = () => {
                 fontSize="lg"
                 fontWeight="bold"
               >
-                <span className="text-[#35B34A]">
+                <span className="text-[#35B34A] text-lg">
                   بیش از ۱۰۰ میلیارد تومان سود، حاصل اعتماد شما به آکولند
                 </span>
-                <span className="text-[#08004D]">
+                <span className="text-[#08004D] text-base">
                   در آکولند، سودآوری و آسودگی خاطر شما، رسالت ماست.
                 </span>
               </Text>
               <Text className="block leading-10 text-[#373737]" fontSize="sm">
                 افتخار ماست که در دو سال فعالیت خود، بیش از ۱۰۰ میلیارد تومان
-                سود برای سرمایه‌گذارانمان به ارمغان آورده‌ایم.ما در آکولند با
+                سود برای سرمایه‌گذاران‌مان به ارمغان آورده‌ایم. ما در آکولند با
                 ارائه فرصت‌های سرمایه‌گذاری امن و سودآور در بازار املاک و
                 مستغلات، به شما کمک می‌کنیم تا:
               </Text>
@@ -138,7 +139,7 @@ const Home: NextPageWithLayout = () => {
                     width={isDesktop ? 30 : 50}
                     height={isDesktop ? 30 : 50}
                   />
-                  سود بالاتر از نرخ تورم را کسب کنید.
+                  سودی بالاتر از نرخ تورم کسب کنید.
                 </Text>
                 <Text
                   className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]"
@@ -187,18 +188,18 @@ const Home: NextPageWithLayout = () => {
             <div className="w-full text-center md:text-start flex justify-center flex-col gap-5 md:gap-3">
               <Text
                 className="block text-[#35B34A]"
-                fontSize={isDesktop ? "lg" : "base"}
+                fontSize="lg"
                 fontWeight="bold"
               >
                 خدمات آکولند: همراهی شما در تمام مراحل سرمایه‌گذاری
               </Text>
               <Text
                 className="block text-[#08004D]"
-                fontSize={isDesktop ? "lg" : "base"}
+                fontSize="base"
                 fontWeight="bold"
               >
-                آکولند با ارائه خدمات جامع و تخصصی، سرمایه‌گذاری در زمین را برای
-                شما آسان و امن می‌کند.
+                سرمایه‌گذاری آسان و امن در زمین، با ارائه خدمات جامع و تخصصی
+                توسط آکولند
               </Text>
             </div>
             <div className="w-full flex flex-col md:flex-row gap-6 md:gap-3 z-50 mt-4 md:mt-0">
@@ -208,22 +209,16 @@ const Home: NextPageWithLayout = () => {
                   title={service.title}
                   description={service.description}
                   image={service.image}
+                  link={service.link}
                 />
               ))}
             </div>
             {isDesktop && (
-              <Image
-                src={Polygon}
-                alt="Background Image"
-                objectFit="contain"
-                width={500}
-                height={500}
-                className="absolute -left-[7rem] z-10 -top-[8rem]"
-              />
+              <PolygonIcon className="w-[35rem] h-[35rem] absolute -left-[7rem] z-10 -top-[8rem]" />
             )}
           </div>
         </div>
-        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 my-6">
+        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 -mb-10">
           <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4">
             <div className="gap-5 md:gap-3 text-center md:text-start flex flex-col w-full">
               <Text
@@ -231,7 +226,7 @@ const Home: NextPageWithLayout = () => {
                 fontSize={isDesktop ? "lg" : "base"}
                 fontWeight="bold"
               >
-                سرمایه گذاری خود را آغاز کنید، آینده‌ درخشان مالی در انتظار
+                سرمایه‌گذاری خود را آغاز کنید، آینده‌ درخشان مالی در انتظار
                 شماست!
               </Text>
               <Text className="block text-[#08004D] leading-7" fontSize="base">
@@ -260,7 +255,6 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
         </div>
-        <Statistics />
         <Reviews
           title="تجربه سرمایه گذاران از مشارکت در پروژه‌های آکولند"
           description="با خواندن نظرات و تجربیات سرمایه‌گذاران آکولند می‌توانید با اطمینان خاطر و خیالی آسوده، گامی ‌مطمئن در مسیر سودآوری بردارید."
@@ -286,11 +280,12 @@ const Home: NextPageWithLayout = () => {
                 fontSize={isDesktop ? "lg" : "base"}
                 fontWeight="bold"
               >
-                به جمع 1500+ عضو
+                به جمع ۱۵۰۰+ عضو
               </Text>
               <Text
                 className="block text-[#08004D] leading-7"
-                fontSize={isDesktop ? "lg" : "base"}
+                fontSize="base"
+                fontWeight="bold"
               >
                 جامعه سرمایه گذاران آکولند بپیوندید
               </Text>
@@ -298,7 +293,7 @@ const Home: NextPageWithLayout = () => {
                 className="block text-[#373737] leading-7 text-center md:text-md md:text-start"
                 fontSize="sm"
               >
-                با عضویت در باشگاه مشتریان آکولند، شما به جمع بیش از 1500
+                با عضویت در باشگاه مشتریان آکولند، شما به جمع بیش از ۱۵۰۰
                 سرمایه‌گذار موفق می‌پیوندید و از مزایای زیر بهره‌مند خواهید شد:
               </Text>
               <div className="flex flex-col gap-12 md:gap-7 mt-2 md:mt-0">
@@ -345,6 +340,8 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
         </div>
+        <Statistics />
+        <Representation />
         <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 my-6 relative">
           <div className="w-full md:w-[85%] flex flex-col md:items-center md:justify-between md:mt-4  gap-4 z-50">
             <div className="gap-2 md:gap-3 text-center md:text-center flex flex-col w-full">
@@ -355,7 +352,7 @@ const Home: NextPageWithLayout = () => {
               >
                 <span className="text-[#35B34A]">آموزش‌ها و مقالات:</span>{" "}
                 <span className="text-[#08004D]">
-                  راهنمایی شروع به سرمایه‌گذاری و موفقیت مالی
+                  راهنمای شروع سرمایه‌گذاری و موفقیت مالی{" "}
                 </span>
               </Text>
             </div>
@@ -371,21 +368,10 @@ const Home: NextPageWithLayout = () => {
               ))}
             </div>
           </div>
-          {isDesktop && (
-            <Image
-              src={Polygon}
-              alt="Background Image"
-              objectFit="contain"
-              width={500}
-              height={500}
-              className="absolute -right-[7rem] z-10 -top-[24rem]"
-            />
-          )}
         </div>
-        <Representation />
         <Support />
-        <div className="w-full h-36 bg-[#F9F9F9] flex my-6">
-          <div className="w-full md:w-[85%] flex items-center justify-center md:mt-4 mt-2 gap-16 px-4">
+        <div className="w-full h-36 bg-[#35B34A] flex my-6">
+          <div className="w-full md:w-[85%] flex items-center justify-center md:mt-4 mt-2 gap-4 md:gap-16 px-4">
             {Logos().map((item: any, index: number) => (
               <Link href={item.link} key={index}>
                 <Image

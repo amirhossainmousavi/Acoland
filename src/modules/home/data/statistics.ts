@@ -6,24 +6,24 @@ import BriefingIcon from '@/common/assets/briefing-white.png'
 export const StatisticsData = () => {
     return [
         {
-            title:"+4700 متر مربع",
+            title:"+۴۷۰۰ متر مربع",
             description:"پروژه تعریف شده",
             image:MeasurementIcon,
             id:1
         },
         {
-            title:"+170 نفر",
+            title:"+۱۷۰ نفر",
             description:"سرمایه گذار فعال",
             image:NetworkIcon,
             id:2
         },  {
-            title:"+1500 عضو",
+            title:"+۱۵۰۰ عضو",
             description:"جامعه سرمایه گذاران",
             image:SocialIcon,
             id:3
         },
         {
-            title:"+7 پروژه",
+            title:"+۷ پروژه",
             description:"تعریف شده موفق",
             image:BriefingIcon,
             id:4

@@ -4,6 +4,7 @@ import ClockIcon from '../assets/clock.png'
 import ExcessIcon from '../assets/excess.png'
 import InformationIcon from '../assets/information.png'
 import LocationIcon from '../assets/location-pin.png'
+import AbacusIcon from '../assets/abacus.png'
 
 
 
@@ -28,7 +29,7 @@ export const ProjectData = [
                     action: '/project/project-3'                },
                 info:[
                     {
-                        text:"تهران، تهران، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"تهران، تهران، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -47,22 +48,22 @@ export const ProjectData = [
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-text:"از 100 متر تا 200 متر",
-                        name:"متراژ قطعات",
-                        type:"string",
-                        icon: ExcessIcon
+                        text:"کوتاه مدت",
+                        name:"نوع سرمایه گذاری",
+                        type:'string',
+                        icon:AbacusIcon
                     }
                 ]
             }
@@ -87,7 +88,7 @@ text:"از 100 متر تا 200 متر",
                 },
                 info:[
                     {
-                        text:"یزد، یزد، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"یزد، یزد، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -106,22 +107,22 @@ text:"از 100 متر تا 200 متر",
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-text:"از 100 متر تا 200 متر",
-                        name:"متراژ قطعات",
-                        type:"string",
-                        icon: ExcessIcon
+                        text:"کوتاه مدت",
+                        name:"نوع سرمایه گذاری",
+                        type:'string',
+                        icon:AbacusIcon
                     }
                 ]
             }
@@ -146,7 +147,7 @@ text:"از 100 متر تا 200 متر",
                 },
                 info:[
                     {
-                        text:"یزد، مهریز، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"یزد، مهریز، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -165,22 +166,22 @@ text:"از 100 متر تا 200 متر",
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-text:"از 100 متر تا 200 متر",
-                        name:"متراژ قطعات",
-                        type:"string",
-                        icon: ExcessIcon
+                        text:"کوتاه مدت",
+                        name:"نوع سرمایه گذاری",
+                        type:'string',
+                        icon:AbacusIcon
                     }
                 ]
             }
@@ -206,7 +207,7 @@ text:"از 100 متر تا 200 متر",
                 },
                 info:[
                     {
-                        text:"تهران، تهران، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"تهران، تهران، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -225,22 +226,22 @@ text:"از 100 متر تا 200 متر",
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-text:"از 100 متر تا 200 متر",
-                        name:"متراژ قطعات",
-                        type:"string",
-                        icon: ExcessIcon
+                        text:"بلند مدت",
+                        name:"نوع سرمایه گذاری",
+                        type:'string',
+                        icon:AbacusIcon
                     }
                 ]
             }
@@ -266,7 +267,7 @@ text:"از 100 متر تا 200 متر",
                 },
                 info:[
                     {
-                        text:"تهران، تهران، منطقه 15، خیابان مفید، انتهای بلوار نور",
+                        text:"تهران، تهران، منطقه ۱۵، خیابان مفید، انتهای بلوار نور",
                         type:"address",
                         icon: LocationIcon,
                         name:"آدرس"
@@ -285,22 +286,22 @@ text:"از 100 متر تا 200 متر",
                         icon: PixelIcon,
                     },
                     {
-                        text:"8 ماه",
+                        text:"۸ ماه",
                         name:"مدت زمان",
                         type:"string",
                         icon: ClockIcon
                     },
                     {
-                        text:"320 متر",
+                        text:"۳۲۰ متر",
                         name:"متراژ کل زمین",
                         type:"string",
                         icon: ExcessIcon
                     },
                     {
-text:"از 100 متر تا 200 متر",
-                        name:"متراژ قطعات",
-                        type:"string",
-                        icon: ExcessIcon
+                        text:"بلند مدت",
+                        name:"نوع سرمایه گذاری",
+                        type:'string',
+                        icon:AbacusIcon
                     }
                 ]
             }
