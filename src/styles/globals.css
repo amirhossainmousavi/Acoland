@@ -149,3 +149,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.css-1u0lry5-MuiChartsLegend-root {
+  display: none !important;
+}

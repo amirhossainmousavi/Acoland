@@ -5,6 +5,7 @@ const nextConfig = {
   publicRuntimeConfig: {
     LIARA_IMAGE_S3_HOST: process.env.LIARA_IMAGE_S3_HOST ?? 'https://acoland-project.storage.iran.liara.space'
   },
+  transpilePackages: ['@mui/x-charts'],
   images: {
     remotePatterns: [
       {

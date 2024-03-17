@@ -20,6 +20,8 @@ import Button from "@/common/component/atom/button";
 import useModal from "@/common/hooks/useModal";
 import { phoneNumberValidator } from "@persian-tools/persian-tools";
 import toast from "react-hot-toast";
+import { BarChart } from "@mui/x-charts/BarChart";
+import { axisClasses } from "@mui/x-charts";
 
 const ProjectPage: NextPageWithLayout = () => {
   const { publicRuntimeConfig } = getConfig();
@@ -46,6 +48,31 @@ const ProjectPage: NextPageWithLayout = () => {
       setIsLoading(false);
     }, 3000);
   }, []);
+
+  const chartSetting = {
+    width: isDesktop ? 700 : 500,
+    height: isDesktop ? 500 : 300,
+    sx: {
+      [`.${axisClasses.left} .${axisClasses.label}`]: {
+        transform: "translate(-20px, 0)",
+      },
+    },
+  };
+  const dataset = [
+    {
+      "رشد پروژه سوم آکولند": 420,
+      "رشد سکه": 117,
+      "رشد دلار": 86,
+      "شاخص کل بورس": 120,
+      "رشد سپرده گذاری": 54,
+      "رشد خودرو": 117,
+      "رشد بیت کوین": 200,
+      "میانگین قیمت مسکن تهران": 117,
+      data: "رشد پروژه سوم آکولند",
+    },
+  ];
+
+  const valueFormatter = (value: number) => `${value}%`;
 
   return (
     <>
@@ -133,7 +160,7 @@ const ProjectPage: NextPageWithLayout = () => {
           />
         </div>
         <div className="w-full flex justify-center items-center">
-          <div className="md:w-[85%] w-full flex flex-col items-center md:mt-8 mt-2 gap-3">
+          <div className="md:w-[85%] w-full flex flex-col items-center -mb-9 gap-3">
             <Text
               fontSize={isDesktop ? "lg" : "base"}
               fontWeight="bold"
@@ -142,15 +169,41 @@ const ProjectPage: NextPageWithLayout = () => {
               مقایسه رشد {data.name} با سایز بازار ارزی
             </Text>
             <div className="w-full flex flex-wrap gap-12 md:gap-6">
-              {data?.comparisons?.map((item: any, index: number) => (
-                <ProgressBar
-                  key={index}
-                  Percent={item.percent}
-                  score={item.score}
-                  title={item.title}
-                  parentClassName="md:w-[49%] w-full"
-                />
-              ))}
+              <BarChart
+                dataset={dataset}
+                xAxis={[{ scaleType: "band", dataKey: "data" }]}
+                series={[
+                  {
+                    dataKey: "رشد پروژه سوم آکولند",
+                    label: "رشد پروژه سوم آکولند",
+                    valueFormatter,
+                  },
+                  { dataKey: "رشد سکه", label: "رشد سکه", valueFormatter },
+                  { dataKey: "رشد دلار", label: "رشد دلار", valueFormatter },
+                  {
+                    dataKey: "شاخص کل بورس",
+                    label: "شاخص کل بورس",
+                    valueFormatter,
+                  },
+                  {
+                    dataKey: "رشد سپرده گذاری",
+                    label: "رشد سپرده گذاری",
+                    valueFormatter,
+                  },
+                  { dataKey: "رشد خودرو", label: "رشد خودرو", valueFormatter },
+                  {
+                    dataKey: "رشد بیت کوین",
+                    label: "رشد بیت کوین",
+                    valueFormatter,
+                  },
+                  {
+                    dataKey: "میانگین قیمت مسکن تهران",
+                    label: "میانگین قیمت مسکن تهران",
+                    valueFormatter,
+                  },
+                ]}
+                {...chartSetting}
+              />
             </div>
           </div>
         </div>
