@@ -150,6 +150,6 @@ body {
   height: 100%;
 }
 
-.css-1u0lry5-MuiChartsLegend-root {
+.css-1u0lry5-MuiChartsLegend-root, .css-0, .MuiChartsLegend-row {
   display: none !important;
 }
