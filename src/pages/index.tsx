@@ -8,9 +8,6 @@ import ServicesData from "@/modules/home/data/services";
 import VideoData from "@/modules/home/data/vidoe.json";
 import getConfig from "next/config";
 import Image from "next/image";
-import RevenumeImage from "@/common/assets/revenue.png";
-import LegalImage from "@/common/assets/Legal.png";
-import SalePriceImage from "@/common/assets/SalePrice.png";
 import useResponsive from "@/common/hooks/useResponsive";
 import CommunityData from "@/modules/home/data/community";
 import BlogData from "@/modules/home/data/blog.json";
@@ -28,48 +25,15 @@ import ProjectCard from "@/common/component/atom/projectCard";
 import { ProjectData } from "@/common/data/project";
 import PolygonIcon from "@/common/component/icons/polygon";
 import PhoneIcon from "@/common/component/icons/phone";
+import PositiveConfirmation from "@/modules/home/data/positive";
+import ReviewData from "@/common/data/reviewData";
+import MarketGrowthChart from "@/common/component/atom/marketGrowthChart";
+import MarketGrowthData from "@/modules/home/data/marketGrowthChart.json";
 
 const Home: NextPageWithLayout = () => {
   const { publicRuntimeConfig } = getConfig();
   const { isDesktop, isMobile } = useResponsive();
   const [phoneNumber, setPhoneNumber] = useState("");
-  const rateData: any = [
-    {
-      image: "",
-      name: "امیرشهریار",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
-      title: "سرمایه گذار پروژه سوم آکولند",
-    },
-    {
-      image: "",
-      name: "امیرشهریار",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
-      title: "سرمایه گذار پروژه سوم آکولند",
-    },
-    {
-      image: "",
-      name: "امیرشهریار",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
-      title: "سرمایه گذار پروژه سوم آکولند",
-    },
-    {
-      image: "",
-      name: "امیرشهریار",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
-      title: "سرمایه گذار پروژه سوم آکولند",
-    },
-    {
-      image: "",
-      name: "امیرشهریار",
-      description:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،",
-      title: "سرمایه گذار پروژه سوم آکولند",
-    },
-  ];
   const handleSubmitCommiutyForm = () => {
     if (!phoneNumberValidator(phoneNumber))
       return toast.error("شماره موبایل اشتباه می‌باشد!");
@@ -135,46 +99,22 @@ const Home: NextPageWithLayout = () => {
                 مستغلات، به شما کمک می‌کنیم تا:
               </Text>
               <div className="flex flex-col gap-6">
-                <Text
-                  className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]"
-                  fontSize={isDesktop ? "base" : "sm"}
-                  fontWeight="bold"
-                >
-                  <Image
-                    src={RevenumeImage}
-                    alt="کسب سود بالاتر از نرخ تورم"
-                    width={isDesktop ? 30 : 50}
-                    height={isDesktop ? 30 : 50}
-                  />
-                  سودی بالاتر از نرخ تورم کسب کنید.
-                </Text>
-                <Text
-                  className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]"
-                  fontSize={isDesktop ? "base" : "sm"}
-                  fontWeight="bold"
-                >
-                  <Image
-                    src={LegalImage}
-                    alt="بدون نگرانی از مسائل حقوقی"
-                    width={isDesktop ? 30 : 50}
-                    height={isDesktop ? 30 : 50}
-                  />
-                  از نگرانی‌های مربوط به مسائل حقوقی و کارشناسی ملک خلاص شوید.
-                </Text>
-                <Text
-                  className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]"
-                  fontSize={isDesktop ? "base" : "sm"}
-                  fontWeight="bold"
-                >
-                  <Image
-                    src={SalePriceImage}
-                    alt="سرمایه گذاری امن"
-                    width={isDesktop ? 30 : 50}
-                    height={isDesktop ? 30 : 50}
-                  />
-                  با اطمینان از به قیمت بودن معامله، سرمایه‌گذاری پرسودی را
-                  تجربه کنید.
-                </Text>
+                {PositiveConfirmation().map((item: any) => (
+                  <Text
+                    className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-3  text-[#707070]"
+                    fontSize={isDesktop ? "base" : "sm"}
+                    fontWeight="bold"
+                    key={item.id}
+                  >
+                    <Image
+                      src={item.photo}
+                      alt={item.text}
+                      width={isDesktop ? 30 : 50}
+                      height={isDesktop ? 30 : 50}
+                    />
+                    {item.text}
+                  </Text>
+                ))}
               </div>
             </div>
             {isDesktop && (
@@ -266,8 +206,27 @@ const Home: NextPageWithLayout = () => {
           title="تجربه سرمایه گذاران از مشارکت در پروژه‌های آکولند"
           description="با خواندن نظرات و تجربیات سرمایه‌گذاران آکولند می‌توانید با اطمینان خاطر و خیالی آسوده، گامی ‌مطمئن در مسیر سودآوری بردارید."
           VideoData={VideoData}
-          rateData={rateData}
+          rateData={ReviewData}
         />
+        <div className="p-2 md:p-0 flex items-center justify-center w-full md:mt-8 -mb-10">
+          <div className="w-full md:w-[85%] flex flex-col md:mt-6">
+            <Text
+              className="block text-[#35B34A] text-center"
+              fontSize={isDesktop ? "lg" : "base"}
+              fontWeight="bold"
+            >
+              مقایسه رشد چند نمونه از پروژه‌های آکولند با سایر بازارها
+            </Text>
+            <div>
+              <MarketGrowthChart
+                backgroundColors={MarketGrowthData.backgroundColors}
+                data={MarketGrowthData.grothData}
+                labels={MarketGrowthData.labels}
+                chartLabel="رشد پروژه بر حسب درصد"
+              />
+            </div>
+          </div>
+        </div>
         <div className="p-2 md:p-0 flex justify-center w-full md:mt-8 my-6 ">
           <div className="w-full md:w-[85%] flex md:justify-between md:mt-4 gap-4">
             {isDesktop && (

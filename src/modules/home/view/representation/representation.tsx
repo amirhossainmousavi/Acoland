@@ -106,7 +106,7 @@ export const Representation = () => {
       !!representationFormData.province.value &&
       !!representationFormData.city.value
     ) {
-      toast.success("درخواست مشاوره شما با موفقیت ثبت شد.");
+      toast.success("درخواست اخذ نمایندگی شما با موفقیت ثبت شد.");
     } else {
       toast.error(
         Object.values(updatedInformationData)?.find?.(

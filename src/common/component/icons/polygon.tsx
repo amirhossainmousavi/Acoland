@@ -8,7 +8,7 @@ export const PolygonIcon = memo(({ ...rest }: SVGAttributes<SVGElement>) => (
     width="200px"
     height="200px"
     viewBox="0 0 1484 1284"
-    enable-background="new 0 0 1484 1284"
+    enableBackground="new 0 0 1484 1284"
     {...rest}
   >
     <path
