@@ -72,48 +72,29 @@ export const ProjectData = () =>{
             title:"سرمایه گذار پروژه سوم آکولند"
         }
     ],
-    comparisons:[
-        {
-            title: 'رشد پروژه سوم آکولند',
-            score:"۲۴۰",
-            percent:"85"
-        },
-        {
-            title: 'رشد سکه',
-            score:"۱۱۷",
-            percent:"72"
-        },
-        {
-            title: 'رشد دلار',
-            score:"۸۵",
-            percent:"43"
-        },
-        {
-            title: 'شاخص کل بورس',
-            score:"۱۲۰",
-            percent:"74"
-        },
-        {
-            title: 'رشد سپرده گذاری',
-            score:"۵۴",
-            percent:"23"
-        },
-        {
-            title: 'رشد خودرو',
-            score:"۱۱۷",
-            percent:"72"
-        },
-        {
-            title: 'رشد بیت کوین',
-            score:"۲۰۰",
-            percent:"80"
-        },
-        {
-            title: 'میانگین قیمت مسکن تهران',
-            score:"۱۱۷",
-            percent:"72"
-        }
-    ],
+    comparisons:{
+        backgroundColors: [
+            "#07004D",
+            "#35B34A",
+            "#D4A129",
+            "#6494EB",
+            "#A033C8",
+            "#3D3DB9",
+            "#63AAA9",
+            "#6699CC",
+          ],
+        grothData:[240, 117, 85, 120, 54, 117, 200, 117],
+        labels:[
+            "پروژه سوم آکولند",
+            "طلا",
+            "سکه",
+            "شاخص کل بورس",
+            "سپرده گذاری",
+            "رشد خودرو",
+            "رشد بیت کوین",
+            "میانگین قیمت مسکن تهران",
+          ]
+    },
         images:[
                 "https://acoland-project.storage.iran.liara.space/Projects/Zamiin.png",
                 "https://acoland-project.storage.iran.liara.space/Projects/Zamiin.png",

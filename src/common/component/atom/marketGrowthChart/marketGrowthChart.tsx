@@ -8,17 +8,22 @@ import {
   BarElement,
   Title,
 } from "chart.js";
+import classNames from "@/common/utils/classNames";
 
 interface MarketGrowthChartProps {
   data: number[];
   labels: string[];
+  backgroundColors: string[];
   chartLabel: string;
+  className?: string;
 }
 
 const MarketGrowthChart: React.FC<MarketGrowthChartProps> = ({
   data,
   labels,
   chartLabel,
+  backgroundColors,
+  className,
 }) => {
   ChartJS.register(
     Tooltip,
@@ -34,16 +39,7 @@ const MarketGrowthChart: React.FC<MarketGrowthChartProps> = ({
       {
         label: chartLabel,
         data: data,
-        backgroundColor: [
-          "#07004D",
-          "#35B34A",
-          "#D4A129",
-          "#6494EB",
-          "#A033C8",
-          "#3D3DB9",
-          "#63AAA9",
-          "#6699CC",
-        ],
+        backgroundColor: backgroundColors,
       },
     ],
   };
@@ -69,7 +65,12 @@ const MarketGrowthChart: React.FC<MarketGrowthChartProps> = ({
   };
 
   return (
-    <div className="w-full md:col-span-2 relative md:h-[30rem] h-[20rem] m-auto p-4 border rounded-md border-white">
+    <div
+      className={classNames(
+        "w-full md:col-span-2 relative md:h-[30rem] h-[20rem] m-auto p-4 flex border rounded-md border-white",
+        { className }
+      )}
+    >
       <Bar data={chartData} options={options as any} />
     </div>
   );

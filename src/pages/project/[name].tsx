@@ -28,18 +28,6 @@ const ProjectPage: NextPageWithLayout = () => {
   const { handleOpen, handleClose, modalProps } = useModal();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isFormHasError, setIsFormHasError] = useState<boolean>(false);
-  const marketGrowthData = [240, 117, 85, 120, 54, 117, 200, 117];
-  const marketGrowthLabels = [
-    "پروژه سوم آکولند",
-    "طلا",
-    "سکه",
-    "شاخص کل بورس",
-    "سپرده گذاری",
-    "رشد خودرو",
-    "رشد بیت کوین",
-    "میانگین قیمت مسکن تهران",
-  ];
-
   const handleSubmitForm = () => {
     if (!phoneNumberValidator(phoneNumber)) {
       setIsFormHasError(true);
@@ -151,13 +139,16 @@ const ProjectPage: NextPageWithLayout = () => {
             >
               مقایسه رشد {data.name} با سایز بازار
             </Text>
-            <div className="w-full flex flex-wrap gap-12 md:gap-6">
-              <MarketGrowthChart
-                chartLabel="رشد پروژه بر حسب درصد"
-                data={marketGrowthData}
-                labels={marketGrowthLabels}
-              />
-            </div>
+            {!!data?.comparisons && (
+              <div className="w-full flex flex-wrap gap-12 md:gap-6">
+                <MarketGrowthChart
+                  chartLabel="رشد پروژه بر حسب درصد"
+                  data={data.comparisons.grothData}
+                  labels={data.comparisons.labels}
+                  backgroundColors={data.comparisons.backgroundColors}
+                />
+              </div>
+            )}
           </div>
         </div>
         <div className="w-full flex justify-center items-center">
