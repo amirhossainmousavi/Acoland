@@ -24,7 +24,7 @@ export const ProjectCard = (props: ProjectCarousel) => {
   } = props;
   const projectStatus: any = {
     inProgress: {
-      text: "درحال سرمایه‌گذاری",
+      text: "در حال سرمایه‌گذاری",
       style:
         "w-[7rem] p-2 rounded-full bg-[#D4A129] text-white flex items-center justify-center text-[0.7rem] left-2 top-2",
     },

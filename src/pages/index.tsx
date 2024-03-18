@@ -11,7 +11,6 @@ import Image from "next/image";
 import RevenumeImage from "@/common/assets/revenue.png";
 import LegalImage from "@/common/assets/Legal.png";
 import SalePriceImage from "@/common/assets/SalePrice.png";
-import Polygon from "@/common/assets/Polygon.png";
 import useResponsive from "@/common/hooks/useResponsive";
 import CommunityData from "@/modules/home/data/community";
 import BlogData from "@/modules/home/data/blog.json";
@@ -27,14 +26,13 @@ import { phoneNumberValidator } from "@persian-tools/persian-tools";
 import toast from "react-hot-toast";
 import ProjectCard from "@/common/component/atom/projectCard";
 import { ProjectData } from "@/common/data/project";
-import { useRouter } from "next/router";
 import PolygonIcon from "@/common/component/icons/polygon";
+import PhoneIcon from "@/common/component/icons/phone";
 
 const Home: NextPageWithLayout = () => {
   const { publicRuntimeConfig } = getConfig();
-  const { isDesktop } = useResponsive();
+  const { isDesktop, isMobile } = useResponsive();
   const [phoneNumber, setPhoneNumber] = useState("");
-  const router = useRouter();
   const rateData: any = [
     {
       image: "",
@@ -104,6 +102,15 @@ const Home: NextPageWithLayout = () => {
               آکولند خیال شما را درباره مسائل حقوقی و دغدغه‌های سرمایه‌گذاری
               آسوده می‌کند
             </Text>
+            {isMobile && (
+              <Button
+                className="flex gap-2 rounded-lg bg-[#35B34A] border-none font-medium "
+                onClick={() => location.assign("tel:02191099118")}
+              >
+                <PhoneIcon />
+                درخواست مشاوره
+              </Button>
+            )}
           </div>
         </div>
         <div className="p-2 md:p-0 flex items-center relative justify-center w-full my-6 z-50 ">
@@ -370,7 +377,7 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
         <Support />
-        <div className="w-full h-36 bg-[#35B34A] flex my-6">
+        <div className="w-full h-36 bg-[#35B34A] flex my-6 justify-center">
           <div className="w-full md:w-[85%] flex items-center justify-center md:mt-4 mt-2 gap-4 md:gap-16 px-4">
             {Logos().map((item: any, index: number) => (
               <Link href={item.link} key={index}>

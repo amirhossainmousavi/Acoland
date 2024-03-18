@@ -57,7 +57,7 @@ const Header = (props: HeaderProps) => {
           {isDesktop && (
             <nav className="flex justify-between w-full items-center">
               <ul
-                className={classNames("flex justify-center  mb-3", {
+                className={classNames("flex justify-center", {
                   "mb-0": isSpecialRoute,
                 })}
               >
@@ -70,8 +70,7 @@ const Header = (props: HeaderProps) => {
                       className={classNames(
                         "inline-block text-[0.9rem] font-medium text-center cursor-pointer mx-5 text-white",
                         {
-                          "text-[#66D178] border-solid border-b-[#66D178] border-b-[3px]":
-                            item.isActiveRoute,
+                          "text-[#66D178]": item.isActiveRoute,
                         }
                       )}
                     >

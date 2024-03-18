@@ -166,7 +166,7 @@ const ProjectPage: NextPageWithLayout = () => {
               fontWeight="bold"
               className="text-[#0C0349]"
             >
-              مقایسه رشد {data.name} با سایز بازار ارزی
+              مقایسه رشد {data.name} با سایز بازار
             </Text>
             <div className="w-full flex flex-wrap gap-12 md:gap-6">
               <BarChart
