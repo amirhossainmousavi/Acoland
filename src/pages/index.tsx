@@ -68,10 +68,9 @@ const Home: NextPageWithLayout = () => {
             </Text>
             {isMobile && (
               <Button
-                className="flex gap-2 rounded-lg bg-[#35B34A] border-none font-medium "
+                className="flex gap-2 rounded-lg bg-[#35B34A] border-none text-sm font-medium mt-2"
                 onClick={() => location.assign("tel:02191099118")}
               >
-                <PhoneIcon />
                 درخواست مشاوره
               </Button>
             )}
